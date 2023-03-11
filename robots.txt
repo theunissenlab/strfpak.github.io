@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: andreas02.css
+Disallow: print.css
+Disallow: /OLD_STRF/staffonly/
+Disallow: /images/

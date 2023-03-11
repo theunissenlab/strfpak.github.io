@@ -1,0 +1,206 @@
+<HTML><HEAD>
+<title>STRFPAK demo and tutorial</title>
+</HEAD>
+
+<BODY Background="picture/background1">
+
+<menu>
+        <menu>
+                <menu>
+<a href="index.html">Home</a> |
+<a href="overview.html">Overview</a> |
+<a href="guidemo.html">Software Demo and Tutorial</a> |
+<a href="download.html">Software Download</a> |
+<a href="strffaq.html">FAQ</a> |
+<a href="contact.html">Contact</a> |
+<a href="link.html">Relevant Links</a> |
+<a href="staffonly/staff.html">Team-members Only</a>
+<p>
+<hr>
+
+This tutorial covers the first public release of STRFPAK (v. 0.1). The software is provided as a Matlab toolbox and includes several Matlab GUIs for graphical display.
+
+<p>
+To run the program at the MATLAB prompt type:
+<p>
+
+<b>>>strfFirstGUI</b>
+<p>
+The following graphics window should be displayed. 
+<p>
+<img src="picture/strfFirstGUI.gif" alt="simple gui" width = 550 height =400>
+<p>
+You can click the appropriate buttons to input the data files, estimate an STRF, 
+predict a neuronal respsonse and evaluate how well the STRF fits the response data.
+The following links direct you to the detailed stages.
+
+<TABLE  BORDER=0 CELLPADDING=1 CELLSPACING=10>
+<TR>
+<TD valign=top >
+<A HREF="guidemo.html#get_filesGUI">
+<img src = "picture/blueball.gif" alt="*" border=0 width="21" height="21">
+Get Files </A><br>
+<A HREF="guidemo.html#calcparameterGUI">
+<img src="picture/blueball.gif" alt="*" border=0 width="21" height="21">
+Parameters</a><br>
+<A HREF="guidemo.html#displayinputGUI">
+<img src="picture/blueball.gif" alt="*" border=0 width="21" height="21">
+Display Input</a><br>
+</TD>
+
+<TD valign=top >
+<img src = "picture/blueball.gif" alt="*" border=0 width="21" height="21">
+Calculate <br>
+<A HREF="guidemo.html#displaystimstatGUI">
+<img src = "picture/blueball.gif" alt="*" border=0 width="21" height="21">
+Display StimStat</A><br>
+<A HREF="guidemo.html#displaystrfGUI">
+<img src = "picture/blueball.gif" alt="*" border=0 width="21" height="21">
+Display STRF </A><br>
+</TD>
+
+<TD valign=top >
+<A HREF="guidemo.html#getpredfiles">
+<img src = "picture/blueball.gif" alt="*" border=0 width="21" height="21">
+Get Pred Files </A><br>
+<img src = "picture/blueball.gif" alt="*" border=0 width="21" height="21">
+Predict <br>
+<A HREF="guidemo.html#displaypredstrf">
+<img src = "picture/blueball.gif" alt="*" border=0 width="21" height="21">
+Display Pred. STRF </A><br>
+</TD>
+
+<TD valign=top >
+<img src = "picture/blueball.gif" alt="*" border=0 width="21" height="21">
+Validate<br>
+<A HREF="guidemo.html#displayinfocc">
+<img src = "picture/blueball.gif" alt="*" border=0 width="21" height="21">
+Display Info/CC </A><br>
+<A HREF="guidemo.html#displaybestfit">
+<img src = "picture/blueball.gif" alt="*" border=0 width="21" height="21">
+Display Best Filter </A><br>
+</TD>
+
+</TABLE>
+
+<hr>
+<h2> <a name="get_filesGUI"><b>Get Input Files Window</a></b></h2>
+<p>
+After clicking "Get Files", the "Get Files" window will prompt you to enter the data sets and 
+stimulus sampling rate. Select data set(s) by clicking inside the <b>stim file list</b> and
+<b> response file list</b>, scrolling to see the selections and clicking on your choice. To select
+multiple data sets, hold down the <b>CTRL</b> key while clicking selections. You can review your selection
+in the "Stimulus Response" window in the "Get Files" window.
+ 
+In the following example, the three data sets are selected: "stim1.dat and spike1.dat", 
+"stim2.dat and spike2.dat" and "stim3.dat and spike3.dat". The stimulus and response sampling rates
+are 1 millisecond. The spatio-dimension is set as 1-Dimension. 
+This parameter is used for later graphic display.
+<p>
+<img src="picture/get_filesGUI.gif" alt="get files" width=600 height=400>
+<p>
+
+
+<hr>
+<h2> <a name="calcparameterGUI"><b>Set Calc. Parameter Window</a></b></h2>
+<p>
+The "Calc Parameter Window" will prompt you to enter the calculation parameters
+used in the software. <b>TWINDOW</b> is the range of lags for computing
+the auto/cross correlation, e.g. 300 ms. 
+<b>Spatio_size</b> is the stimulus spatial dimension. For the following example,
+we set 62. <b>Tol Val</b> is the list of tolerance values for STRF estimation,
+e.g. 0.1, 0.05, 0.001, 0.0005.
+<p>
+<img src="picture/calcparameterGUI.gif" width=400 height=350>
+<p>
+
+<hr>
+<h2> <a name="displayinputGUI"><b>Display Input Window</a></b></h2>
+<p>
+The "Display Input Window" will show three plots: stimulus image(if 1-D);
+plot of the spike train and post-stimulus time histogram (PSTH) in the following
+example.
+<p>
+<img src="picture/displayinputGUI.gif" width=500 height=550>
+<p>
+
+<hr>
+<h2> <a name="displaystimstatGUI"><b>Display Stimulus Statistics</a></b></h2>
+<p>
+There are two options to display stimulus statistics: stimulus auto-correlation
+and stimulus-spike cross-correlation. 
+<p>
+<img src="picture/displaystimstatGUI.gif" width=500 height=500>
+<p>
+
+<hr>
+<h2> <a name="displaystrfGUI"><b>Display STRF</a></b></h2>
+<p>
+There are two options to display estimated STRFs: STRF only 
+and the STRF with projection on two axes. 
+<p>
+<img src="picture/displaystrfGUI.gif" width=550 height=550>
+<p>
+
+<hr>
+<h2> <a name="getpredfiles"><b>Get Pred Files</a></b></h2>
+<p>
+Before the "Get PredFiles" graphic window pops out, you are asked if you want
+to set <b>matchflg</b> parameter. The <b>matchflg</b> refers to whether the
+original data sets are used or not to do prediction. Even if the original
+data sets are chosen, the Jackknifed STRF will be used to prevent
+over-fitting. The layout of the "Get PredFiles" window is the same as  
+the "Get Files" window. 
+<p>
+
+<hr>
+<h2> <a name="displaypredstrf"><b>Display Pred STRF</a></b></h2>
+<p>
+In the "Display Pred STRF" window, the first plot is the image of
+the stimulus file. The second plot gives the comparison of the predicted
+neuron response with the actual responses. The actual responses contain
+two files that gotten from avgeraging the first part and the second
+part of all the trials.
+<p>
+<img src="picture/displaypredstrfGUI.gif" width=550 height=550>
+<p>
+
+<hr>
+<h2> <a name="displayinfocc"><b>Display Info Value and Correlation Coeff
+</a></b></h2>
+There are two different measures to quantify the estimated STRF's
+goodness of fit: coherence and correlation coefficient. The "Display
+Info/CC" window provides the predicted coherence and correlation 
+coefficient.
+<p>
+<p>
+<img src="picture/displayinfoccGUI.gif" width=450 height=400>
+<p>
+
+<hr>
+<h2> <a name="displaybestfit"><b>Display Best Estimated Filter 
+</a></b></h2>
+<p>
+The best filter has the largest predicted information values. 
+The window also shows the tolerance value that give the
+best prediction.
+<p>
+<img src="picture/displaybestfit.gif" width=450 height=400>
+<p>
+<hr>
+
+<i>
+Questions and comments regarding this software release and this web site can be sent to
+<a href="junli@socrates.berkeley.edu">junli@socrates.berkeley.edu</a><br>
+Last Modified: Jan. 6, 2003<p>
+</i>
+
+                </menu>
+        </menu>
+</menu>
+
+<a href = "index.html"><img src="picture/home.gif" border=1 alt="home">Back to the STRF Software home page</a> <br>
+
+
+</BODY>
+</HTML>

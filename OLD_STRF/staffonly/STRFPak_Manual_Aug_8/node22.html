@@ -1,0 +1,173 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with jLaTeX2HTML 2002 (1.62) JA patch-1.4
+patched version by:  Kenshi Muto, Debian Project.
+LaTeX2HTML 2002 (1.62),
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Parameters</TITLE>
+<META NAME="description" CONTENT="Parameters">
+<META NAME="keywords" CONTENT="STRFPAK_Manual_Aug_8">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="jLaTeX2HTML v2002 JA patch-1.4">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="STRFPAK_Manual_Aug_8.css">
+
+<LINK REL="next" HREF="node23.html">
+<LINK REL="previous" HREF="node21.html">
+<LINK REL="up" HREF="node16.html">
+<LINK REL="next" HREF="node23.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html419"
+  HREF="node23.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html415"
+  HREF="node16.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html409"
+  HREF="node21.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html417"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html420"
+  HREF="node23.html">Displaying Input</A>
+<B> Up:</B> <A NAME="tex2html416"
+  HREF="node16.html">Get Input</A>
+<B> Previous:</B> <A NAME="tex2html410"
+  HREF="node21.html">Getting Input</A>
+ &nbsp <B>  <A NAME="tex2html418"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00556000000000000000">
+Parameters</A>
+</H2>
+
+<DIV ALIGN="CENTER"><A NAME="calcparaa"></A><A NAME="212"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 3.8:</STRONG>
+Calculation parameter window for the auditory example</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="604" HEIGHT="570" ALIGN="BOTTOM" BORDER="0"
+ SRC="img42.png"
+ ALT="\includegraphics[]{figures/calcparaa.ps}"></DIV></TD></TR>
+</TABLE>
+</DIV>
+
+<!-- MATH
+ $\fbox{Parameters}$
+ -->
+<IMG
+ WIDTH="108" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="img43.png"
+ ALT="\fbox{Parameters}"> in STRFPAK mean the calculation parameters used
+for the estimation of the STRF. The 
+<B>Calc Parameters</B> window is shown in the following figure&nbsp;<A HREF="node22.html#calcparaa">3.8</A>. 
+There are two types of calculation parameters required by STRFPAK-2.0:
+<!-- MATH
+ $\fbox{TimeLag}$
+ -->
+<IMG
+ WIDTH="89" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="img44.png"
+ ALT="\fbox{TimeLag}"> and <!-- MATH
+ $\fbox{Tolerance value}$
+ -->
+<IMG
+ WIDTH="142" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="img45.png"
+ ALT="\fbox{Tolerance value}">.
+Use the help button to reveal  the meaning and
+the format needed for specifying these parameters.
+
+The <B>TimeLag</B> parameter controls the magnitude of the maximum temporal duration of the STRF.  STRFPAK assumes values of the STRF more than TimeLag bin sizes away from simultaneity are 0.   
+For example, since the bin size for the above auditory data is <IMG
+ WIDTH="14" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img46.png"
+ ALT="$1$"> ms,
+the time course covers a period of <IMG
+ WIDTH="48" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img47.png"
+ ALT="$\pm 300$"> ms if we set
+<B>TimeLag</B> as <IMG
+ WIDTH="33" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img48.png"
+ ALT="$300$">.
+For the visual example, the bin size is <IMG
+ WIDTH="23" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img49.png"
+ ALT="$14$"> ms, the time course
+covers a period of <IMG
+ WIDTH="38" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img50.png"
+ ALT="$\pm70$"> ms if we set <B>TimeLag</B> as <IMG
+ WIDTH="14" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img51.png"
+ ALT="$5$">.
+If a larger range is needed, <B>TimeLag</B> can be increased.
+
+STRFs with large TimeLags or large-dimensional stimuli will have so many free parameters that a form of regularization is desired.  STRFPAKs regularization works by projecting the STRF onto a subspace spanned by the strongest few eigenvectors of the stimulus autocorrelation.   <B>Tolerance value</B> controls how many eigenvectors are included in this subspace.  All eigenvectors with a corresponding eigenvalue less than a given tolerance value are set to zero in the estimated STRF.  Since it is difficult to guess what the tolerance value should be for any cell <EM>a priori</EM>, and since estimating and validating a STRF at several tolerance values is computationally easy, a list of trial tolerance values are typically used. 
+In the above examples, we have set trial <B>Tolerance value</B>s to  
+<!-- MATH
+ $0.1\ 0.05\ 0.001\ 0.0005$
+ -->
+<IMG
+ WIDTH="175" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img52.png"
+ ALT="$0.1\ 0.05\ 0.001\ 0.0005$">.
+
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html419"
+  HREF="node23.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html415"
+  HREF="node16.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html409"
+  HREF="node21.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html417"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html420"
+  HREF="node23.html">Displaying Input</A>
+<B> Up:</B> <A NAME="tex2html416"
+  HREF="node16.html">Get Input</A>
+<B> Previous:</B> <A NAME="tex2html410"
+  HREF="node21.html">Getting Input</A>
+ &nbsp <B>  <A NAME="tex2html418"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+
+2004-08-09
+</ADDRESS>
+</BODY>
+</HTML>

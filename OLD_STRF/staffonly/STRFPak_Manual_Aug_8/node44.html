@@ -1,0 +1,130 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with jLaTeX2HTML 2002 (1.62) JA patch-1.4
+patched version by:  Kenshi Muto, Debian Project.
+LaTeX2HTML 2002 (1.62),
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>A list of Main Functions</TITLE>
+<META NAME="description" CONTENT="A list of Main Functions">
+<META NAME="keywords" CONTENT="STRFPAK_Manual_Aug_8">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="jLaTeX2HTML v2002 JA patch-1.4">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="STRFPAK_Manual_Aug_8.css">
+
+<LINK REL="next" HREF="node45.html">
+<LINK REL="previous" HREF="node43.html">
+<LINK REL="up" HREF="STRFPAK_Manual_Aug_8.html">
+<LINK REL="next" HREF="node45.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html686"
+  HREF="node45.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html682"
+  HREF="STRFPAK_Manual_Aug_8.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html676"
+  HREF="node43.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html684"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html687"
+  HREF="node45.html">Quick Guide to Run</A>
+<B> Up:</B> <A NAME="tex2html683"
+  HREF="STRFPAK_Manual_Aug_8.html">STRFPAK: A Spatio-temporal Receptive</A>
+<B> Previous:</B> <A NAME="tex2html677"
+  HREF="node43.html">Glossary</A>
+ &nbsp <B>  <A NAME="tex2html685"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00900000000000000000">
+A list of Main Functions</A>
+</H1>
+The following lists the main functions and script programs available in 
+STRFPAK-2.0.
+<PRE>
+Main files 
+----------------
+1. Core Calculation Functions:
+----------------
+cal_AVG.m          : Calculates the average of the stimuli, the 
+                     response, and the PSTH of the cell.
+cal_AutoCorr.m     : Calculates the autocorrelation of the stimuli.
+cal_AutoCorrSep.m  : Calculates the autocorrelation of the stimuli 
+                     using an assuming space and time are separable.  
+cal_CrossCorr.m    : Calculates the cross-correlation of stimuli 
+                     and responses.
+cal_Strf.m         : Calculates the STRF.
+cal_StrfSep.m      : Calculates the STRF using a separable algorithm.
+calStrf_script.m   : Calcualtes the STRF and normalizes.  
+calStrfSep_script.m: Calcualtes a separable STRF and normalizes.
+cal_PredStrf.m     : Predicts a PSTH using the estimated STRF and 
+                     new stimulus.
+cal_Validate.m     : Validates predictions.
+
+2. Display Functions:
+-----------------
+displayinput_GUI.m      : Displays preprocessed data.
+displaystimstat2d_GUI.m : Displays the stimulus-response 
+                          statistical results.
+displaystrf_GUI.m       : Displays all the estimated STRFs and 
+                          associated post-processed results
+displaypredstrf_GUI.m   : Displays the predicted PSTH with its 
+                          associated stimulus.
+displayinfocc_GUI.m     : Displays cc values and mutual information 
+                          between predicted and actual PSTH.
+displaybeststrf_GUI.m   : Extracts the best STRF and displays it 
+                          with its associated info value.
+
+3. Preprocessing Functions:
+-----------------
+songwave_spectrum.m   : Calculates a spectrogram using a Short-time 
+                        Fourier Transformation
+wavelet1d_scalogram.m : Calculates a scalogram using a Morlet Wavelet 
+                        Transformation.
+
+4. Batch-mode Functions:
+-----------------
+STRFPAK_cluster_template.m: Sets up all the parameters and data paths 
+                            for core computing.
+STRFPAK_core.m            : Script performing estimation, prediction and 
+                            validation.  Intermediate results also saved.
+
+Main intermediate output file list
+-----------------
+Stim_autocorr.mat           : stimuli autocorrelation matrix
+StimResp_crosscorr.mat      : stimuli-response crosscorrelation vector
+SR_crosscorrJN.mat          : Jackknifed crosscorrelation
+strfResult.mat              : the STRF matrices
+predResult-EstSpike_Tolx.mat: predicted psth for tolrence value x
+predResult-avgSpike_Tolx.mat: original psth used for prediciton at tol x
+info_r_result.mat           : validation results
+</PRE>
+<BR><HR>
+<ADDRESS>
+
+2004-08-09
+</ADDRESS>
+</BODY>
+</HTML>

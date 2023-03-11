@@ -1,0 +1,209 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with jLaTeX2HTML 2002 (1.62) JA patch-1.4
+patched version by:  Kenshi Muto, Debian Project.
+LaTeX2HTML 2002 (1.62),
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Displaying PrePSTH (the predicted PSTH)</TITLE>
+<META NAME="description" CONTENT="Displaying PrePSTH (the predicted PSTH)">
+<META NAME="keywords" CONTENT="STRFPAK_Manual_Aug_8">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="jLaTeX2HTML v2002 JA patch-1.4">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="STRFPAK_Manual_Aug_8.css">
+
+<LINK REL="previous" HREF="node33.html">
+<LINK REL="up" HREF="node31.html">
+<LINK REL="next" HREF="node35.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html566"
+  HREF="node35.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html562"
+  HREF="node31.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html558"
+  HREF="node33.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html564"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html567"
+  HREF="node35.html">Validate</A>
+<B> Up:</B> <A NAME="tex2html563"
+  HREF="node31.html">Prediction</A>
+<B> Previous:</B> <A NAME="tex2html559"
+  HREF="node33.html">Prediction</A>
+ &nbsp <B>  <A NAME="tex2html565"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00573000000000000000">
+Displaying PrePSTH (the predicted PSTH)</A>
+</H2>
+After the prediction stage, we have a predicted PSTH and an original PSTH
+from the actual neuron response. The <B>Display Predicted PSTHs</B> window provides a graphical display of these results.
+
+Figure&nbsp;<A HREF="node34.html#displaypsth">3.17</A> shows predicted results for the auditory example at
+with a Tol Value of <IMG
+ WIDTH="38" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img96.png"
+ ALT="$0.05$">. The predicted results for the visual example are
+shown in Figure&nbsp;<A HREF="node34.html#displaypsth-2">3.18</A>.
+&gt;From the figures, we can see that the top left panel in the window 
+shows the input stimulus used
+for prediction. If the spatial domain of the input stimulus is <IMG
+ WIDTH="30" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img37.png"
+ ALT="$1D$">,
+the <IMG
+ WIDTH="57" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img97.png"
+ ALT="$x\ axis$"> is time in <IMG
+ WIDTH="30" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img98.png"
+ ALT="$ms$"> and the <IMG
+ WIDTH="56" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img99.png"
+ ALT="$y\ axis$"> the spatial domain (e.g. frequency in <IMG
+ WIDTH="31" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img100.png"
+ ALT="$Hz$"> for auditory spectrograms).
+If the spatial domain of the input stimulus is <IMG
+ WIDTH="30" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img41.png"
+ ALT="$2D$">,
+it only shows first <IMG
+ WIDTH="23" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img56.png"
+ ALT="$12$"> <IMG
+ WIDTH="30" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img41.png"
+ ALT="$2D$"> video frames in the current version
+of STRFPAK.
+The bottom left panel shows the predicted PSTHs together with
+the raw neuronal responses.
+You can easily see the goodness of fit from this plot.
+The right panel of the window displays information and options.
+The first text box shows the tolerance value used for the left plots. 
+You can see
+plots based of STRFs at other tolerance values by clicking the <!-- MATH
+ $\fbox{Next Tol Val}$
+ -->
+<IMG
+ WIDTH="121" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="img101.png"
+ ALT="\fbox{Next Tol Val}"> and <!-- MATH
+ $\fbox{Prev Tol Val}$
+ -->
+<IMG
+ WIDTH="120" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="img102.png"
+ ALT="\fbox{Prev Tol Val}"> buttons.
+The associated file names of stimulus and
+response used for the plots in the left panel
+are shown in the <B>pred stim file</B> field and the <B>pred resp file</B> field.
+If more than one stimulus-response file is used for the prediction,
+different files
+can be displayed by pressing the <!-- MATH
+ $\fbox{Next file}$
+ -->
+<IMG
+ WIDTH="85" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="img103.png"
+ ALT="\fbox{Next file}"> and <!-- MATH
+ $\fbox{Prev file}$
+ -->
+<IMG
+ WIDTH="84" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="img104.png"
+ ALT="\fbox{Prev file}"> buttons.
+<IMG
+ WIDTH="53" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3.png"
+ ALT="\fbox{Help}"> and <IMG
+ WIDTH="59" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="img23.png"
+ ALT="\fbox{Close}"> buttons are provided in the
+bottom right position of the window.
+The <B>Smooth_window</B> field shows the value used for smoothing
+the raw neuronal psth, which can be changed at any time.
+
+<DIV ALIGN="CENTER"><A NAME="displaypsth"></A><A NAME="385"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 3.17:</STRONG>
+Display prediction results for the auditory example</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="575" HEIGHT="516" ALIGN="BOTTOM" BORDER="0"
+ SRC="img105.png"
+ ALT="\includegraphics[width=5in]{figures/pstha.ps}"></DIV></TD></TR>
+</TABLE>
+</DIV>
+
+<DIV ALIGN="CENTER"><A NAME="displaypsth-2"></A><A NAME="390"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 3.18:</STRONG>
+Display prediction results for the visual example</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="575" HEIGHT="536" ALIGN="BOTTOM" BORDER="0"
+ SRC="img106.png"
+ ALT="\includegraphics[width=5in]{figures/displaypredv.ps}"></DIV></TD></TR>
+</TABLE>
+</DIV>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html566"
+  HREF="node35.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html562"
+  HREF="node31.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html558"
+  HREF="node33.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html564"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html567"
+  HREF="node35.html">Validate</A>
+<B> Up:</B> <A NAME="tex2html563"
+  HREF="node31.html">Prediction</A>
+<B> Previous:</B> <A NAME="tex2html559"
+  HREF="node33.html">Prediction</A>
+ &nbsp <B>  <A NAME="tex2html565"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+
+2004-08-09
+</ADDRESS>
+</BODY>
+</HTML>

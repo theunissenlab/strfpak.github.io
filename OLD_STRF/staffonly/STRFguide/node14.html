@@ -1,0 +1,152 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with jLaTeX2HTML 2002 (1.62) JA patch-1.4
+patched version by:  Kenshi Muto, Debian Project.
+LaTeX2HTML 2002 (1.62),
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Application of the STRFPAK to the Examples</TITLE>
+<META NAME="description" CONTENT="Application of the STRFPAK to the Examples">
+<META NAME="keywords" CONTENT="STRFguide">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="jLaTeX2HTML v2002 JA patch-1.4">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="STRFguide.css">
+
+<LINK REL="previous" HREF="node11.html">
+<LINK REL="up" HREF="node9.html">
+<LINK REL="next" HREF="node15.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html262"
+  HREF="node15.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html258"
+  HREF="node9.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html254"
+  HREF="node13.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html260"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html263"
+  HREF="node15.html">Main Window</A>
+<B> Up:</B> <A NAME="tex2html259"
+  HREF="node9.html">Using STRFPAK</A>
+<B> Previous:</B> <A NAME="tex2html255"
+  HREF="node13.html">Example of Vision System</A>
+ &nbsp <B>  <A NAME="tex2html261"
+  HREF="node2.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00630000000000000000">
+Application of the STRFPAK to the Examples</A>
+</H1> 
+Theoretical neuroscience studies the link between stimulus and response
+from two opposite points of view: neural encoding and neural decoding
+[<A
+ HREF="node29.html#dayan">7</A>]. Neural encoding refers to the map from stimulus to response
+and neural decoding refers to the map from response to stimulus.
+STRFPAK is a useful software tool for studying neural encoding. 
+For example,
+the second-order statistics of natural stimuli are calculated 
+in STRFPAK for studying properties of stimuli.
+STRFPAK can also be used to determine what aspects of stimulus
+are represented by sensory neurons, reveal the response properties of
+these neurons, and predict neuron responses to other stimuli.
+STRFPAK also implements information theory to estimate how the information
+is conveyed about stimuli by spike sequences and predicted responses.
+
+<P>
+Using the example data, we will see how STRFPAK works
+to solve above problems: studying properties of the stimuli,
+estimating the spatio-temporal transfer function of sensory neurons,
+predicting neuron response on different type of stimuli, and
+validating goodness of estimated STRF.
+
+<P>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"><STRONG>Subsections</STRONG></A>
+
+<UL>
+<LI><A NAME="tex2html264"
+  HREF="node15.html">Main Window</A>
+<LI><A NAME="tex2html265"
+  HREF="node16.html">Get Datafiles Window</A>
+<LI><A NAME="tex2html266"
+  HREF="node17.html">Calculation Parameter Window</A>
+<LI><A NAME="tex2html267"
+  HREF="node18.html">Display Input Window</A>
+<LI><A NAME="tex2html268"
+  HREF="node19.html">Estimate</A>
+<LI><A NAME="tex2html269"
+  HREF="node20.html">Display Stimulus Statistics Window</A>
+<LI><A NAME="tex2html270"
+  HREF="node21.html">Display STRFs Window</A>
+<LI><A NAME="tex2html271"
+  HREF="node22.html">Get Datafiles for Prediction and Validation</A>
+<LI><A NAME="tex2html272"
+  HREF="node23.html">Predict</A>
+<LI><A NAME="tex2html273"
+  HREF="node24.html">Display Predicted PSTHs Window</A>
+<LI><A NAME="tex2html274"
+  HREF="node25.html">Validate</A>
+<LI><A NAME="tex2html275"
+  HREF="node26.html">Display Information Value and Correlation Coefficient Window</A>
+<LI><A NAME="tex2html276"
+  HREF="node27.html">Display Best STRF Window</A>
+</UL>
+<!--End of Table of Child-Links-->
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html262"
+  HREF="node15.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html258"
+  HREF="node9.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html254"
+  HREF="node13.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html260"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html263"
+  HREF="node15.html">Main Window</A>
+<B> Up:</B> <A NAME="tex2html259"
+  HREF="node9.html">Using STRFPAK</A>
+<B> Previous:</B> <A NAME="tex2html255"
+  HREF="node13.html">Example of Vision System</A>
+ &nbsp <B>  <A NAME="tex2html261"
+  HREF="node2.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+
+2003-03-19
+</ADDRESS>
+</BODY>
+</HTML>

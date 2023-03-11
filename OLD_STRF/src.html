@@ -1,0 +1,365 @@
+<HTML><HEAD>
+<title>Documents of The STRF Software</title>
+</HEAD>
+
+<BODY Background="picture/background1">
+
+<menu>
+        <menu>
+                <menu>
+
+<a href="index.html">Home</a> | 
+<a href="overview.html">Overview</a> | 
+<a href="docs.html">Documents</a> |
+<a href="src.html">Source Code</a> |
+<a href="guidemo.html">Software Demo</a> | 
+<a href="whatnew.html">What's New?</a> |
+<a href="staff.html">Staff</a>
+<p>
+<hr>
+
+<h1>Structure of STRF Source Codes</h1>
+<ul>
+  <li><a href="src.html#fileInput">File Input</a><ul>
+  <li>Read/Load the data files such as stimulus files and neural response files.</li>
+  <li>Display the data set e.g. the stimulus and response data.</li>
+  <li>Pre-process the data files.</li>
+</ul>
+  </li>
+  <li><a href="src.html#strfCal">STRF Calculation</a><ul>
+  <li>Calculate stimulus statistics<ul>
+  <li>Calculation auto-correlation of stimulus.</li>
+  <li>Calculation cross-correlation of stimulus and response.</li>
+</ul>
+  </li>
+  <li>Post-process&nbsp; the STRF.</li>
+</ul>
+  </li>
+  <li><a href="src.html#validation">Validation of STRF</a></li>
+  <li><a href="src.html#output">Displaying Output</a></li>
+</ul>
+<p>
+<hr>
+<h1>The Matlab/C Codes</h1>
+The code is packaged as several Matlab functions so that is can be used in
+  a natural fashion. The Matlab 'help' function will return information on each
+  function.
+<h2> <a name="fileInput"><b>File Input</a></b></h2>
+
+<ul>
+<li>
+<a href="../STRF/Vision/InputData/readimfile.m">readimfile</a><ul>
+    <li><code>mov=readimfile(sImFile,  scale_to_pix,
+      mask_to_pix, crop_to_pix, smallfmt,  startframe, endframe,  dosmooth);</code><font SIZE="2"></li>
+      </font>
+      </li>
+      <li>Input parameters:
+    <ul>
+      <li>sImFile - file name of imsm file </li>
+      <li>startframe - first frame to load. default=1. </li>
+      <li>endframe - last frame to load. default=end. (also end if endframeConverts a cell array or struct to an shaded polygon image.</li>
+      <li>scale_to_pix - special to movies where space is X x X (2D square).
+      rescale each frame to scale_to_pix x scale_to_pix after loading.</li>
+      <li>mask_to_pix - apply a circular mask of diameter mask_to_pix in
+      scale_to_pix dimension</li>
+      <li>crop_to_pix - square crop after scaling and masking</li>
+      <li>smallfmt - return uint8 (1) or double (0) (default=0)</li>
+      <li>dosmooth - filter against aliasing before rescaling (default=0)</li>
+    </ul>
+      </li>
+      <li>Output is a X x T size matrix. Here X is the total number of spatial
+      channels and T is time. The sImFile header contains information how X
+      breaks down into different spatial dimensions, </li>
+    </ul>
+    <p>&nbsp;</li>
+  <li><a href="../STRF/Vision/InputData/loadimfile.m">loadimfile</a><ul>
+      <li><code>mov=loadimfile(sImFile, startframe, endframe, scale_to_pix,
+      mask_to_pix, crop_to_pix, smallfmt, dosmooth);</code><font SIZE="2"></li>
+      </font>
+      <li>Input parameters:
+    <ul>
+      <li>sImFile - file name of imsm file </li>
+      <li>startframe - first frame to load. default=1. </li>
+      <li>endframe - last frame to load. default=end. (also end if endframeConverts a cell array or struct to an shaded polygon image.</li>
+      <li>scale_to_pix - special to movies where space is X x X (2D square).
+      rescale each frame to scale_to_pix x scale_to_pix after loading.</li>
+      <li>mask_to_pix - apply a circular mask of diameter mask_to_pix in
+      scale_to_pix dimension</li>
+      <li>crop_to_pix - square crop after scaling and masking</li>
+      <li>smallfmt - return uint8 (1) or double (0) (default=0)</li>
+      <li>dosmooth - filter against aliasing before rescaling (default=0)</li>
+    </ul>
+      </li>
+      <li>Output is a X x T size matrix. Here X is the total number of spatial
+      channels and T is time. The sImFile header contains information how X
+      breaks down into different spatial dimensions, </li>
+    </ul>
+  <p>&nbsp;</li>
+  <li><a href="../STRF/Vision/InputData/respload.m">respload</a>
+    <ul>
+      <li><code><font face="Courier New">resp=respload(respfile, [respfiletype],
+      [setnan=0]);</font></code></li>
+      <li>Load a response file to a matrix.</li>
+      <li>Return a matrix with PSTH as the first column.</li>
+    </ul>
+  <p>&nbsp;</li>
+
+  <li><a href="../STRF/Audition/do_strf">dcp_stim_init</a> (Written in C)<ul>
+  <li><code><font face="Courier New">dcp_stim_init [-win xx] [-f_low xx]
+  [-f_high xx] [-f_width xx] [-lin] file1 file2 file3 ...;</font></code></li>
+  <li>Calculate the spectrographic representation of sound for all the files and
+  initialize global variables.</li>
+  <li>Optional arguments:<ul>
+  <li>-win xx: the length of the window to use for the calculation of the second
+  moment. It should be greater or equal to the auto-correlation length of the
+  stimulus and the memory of the system. Defaults to 200ms.</li>
+  <li>-f_low xx: lower frequency bound for spectrogram. Defaults to 250 Hz.</li>
+  <li>-f_high xx: upper frequency bound for spectrogram. Defaults to 8 kHz.</li>
+  <li>-lin: makes a linear spectrogram.</li>
+</ul>
+  </li>
+  <li>Output 4 types of files:<ul>
+  <li>stim_init.rec - has file name + length of stim</li>
+  <li>stim_spect(file number).dat - the spectrograms in binary format</li>
+  <li>stim_init_count.avg - the parameters</li>
+  <li>stim_init_avg.avg - the average stim in each band<br>
+&nbsp;</li>
+</ul>
+  </li>
+</ul>
+  </li>
+  </ul>
+<hr>
+
+<h3><b>Pre-processing the Input Files</b></h3>
+<ul>
+  <li><a href="file:///E:/share/matlab/david/mutils/movpower.m">movpower</a><ul>
+    <li>fmoviep=movpower(varagins);</li>
+    <li>Transform a stimulus movie to the Fourier power domain.(wrapper the
+    function movphasesep.m).</li>
+    </ul>
+    <p>&nbsp;</li>
+  <li><a href="file:///E:/share/matlab/david/mutils/movphasesep.m">movphasesep</a><ul>
+    <li>[fmovies,fmoviep]=movphasesep(movie,startidx,stopidx,bnorm,....bpower,bzdc);</li>
+    <li>Transform a stimulus movie into the phase-separated fourier domain.</li>
+  </ul>
+  </li>
+  </ul>
+  <hr>
+
+<h2> <a name="strfCal"><b>STRF Calculation</a></b></h2>
+  <ul>
+    <li><b><a href="../STRF/Vision/Calculation/movxc.m">movxc</a></b><ul>
+      <li><code><font face="Courier New">[SR, n, mS, mR, tSA, sSA2]=movxc(stim,
+      resp, maxlag, boundary, singlesSA, meansub);</font></code></li>
+      <li>Calculate spike-triggered average and stimulus cross-correlation
+      matrices given a stimulus and response and stimulus auto-correlation
+      matrices.</li>
+      <li>Input parameters:
+      <ul>
+        <li>stim - T x N matrix where space is unwrapped into a single dimension
+        of size N. Here T is the number of time bins.</li>
+        <li>resp - T x M matrix where M are different responses to the same
+        stimulus (eg, resamplings of a neuron, multiple neurons, voxels, etc)
+        Nan values in resp are considered invalid bins for the given response
+        vector and will be skipped in the various calculations.</li>
+        <li>maxlag - range of latencies to include in kernel. maxlag=[t0 t1]
+        calculate SR over latancies t0:t1<br>
+        if maxlag is scalar, use t0=-maxlag, t1=maxlag.</li>
+        <li>boundary - 'circular' - assume stimulus is circular. 'zero' - assume
+        zero values outside of valid times (default).</li>
+        <li>singlesSA - 0 [default] - separate sSA for each response channel and
+        1 - single sSA for all channels (faster, use for PFTH).</li>
+        <li>meansub - subtract mean from stim and resp before calculating the
+        various correlation matrices (default 1).</li>
+      </ul>
+      </li>
+      <li>Output:<ul>
+        <li>SR - stimulus-response cross correlation (N x maxlag*2+1 x M).</li>
+        <li>n - number of samples in each response set (M x 1).</li>
+        <li>tSA - temporal stimulus autocorrelation (maxlag*2+1 x maxlag*2+1 x
+        M).</li>
+        <li>sSA2 - 2nd order spatial stimulus autocorrelation (N x N x M).</li>
+        <li>mS - stimulus mean for each response channel (N x M)... may differ
+        along m dimension because some response channels may be invalid at
+        different times</li>
+        <li>mR - mean response for each channel (M x 1)<br>
+&nbsp;</li>
+      </ul>
+      </li>
+    </ul>
+    </li>
+    <li><a href="../STRF/Vision/Calculation/normalize0.m">normalize0</a><ul>
+      <li><code><font face="Courier New">[SR, mS, mR, tSA, sSA2]=normalize0(SR,
+      n, mS, tSA, sSA2, meansub);</font></code></li>
+      <li>0th-order correction (divide each summed term by n, here n is the
+      number of samples.)</li>
+      <li>Input parameters: <br>
+      N - number of spatial dimensions<br>
+      U - total number of time lags (eg, length([maxlag(1):maxlag(2)]))<br>
+      M - number of response sets (or response dimensions)<br>
+      R - number of resamples<ul>
+        <li>SR - raw spike-triggered average (correlation between stim and<br>
+        resp) (N x U x M x R)</li>
+        <li>n - sample counts (M x R)</li>
+        <li>mS - stimulus mean (N x M x R)</li>
+        <li>mR - response mean (M x R)</li>
+        <li>tSA - temporal autocorrelation matrix (U x U x M x R or leave empty
+        [], to skip temporal decorrelation)</li>
+        <li>sSA2 - spatial autocorrelation matrix (N x N x M x R or N x N and
+        use the same one for each response set--speeds things up)<br>
+&nbsp;</li>
+      </ul>
+      </li>
+    </ul>
+    </li>
+    <li><a href="../STRF/Vision/Calculation/normalize.m">normalize</a><ul>
+      <li><code><font face="Courier New">[H, neigs]=normalize(SR, sSA, tSA,
+      mineigs, neigs);</font></code></li>
+      <li>Input parameters (basically the output from movxc.m or summed output
+      from<br>
+      multiple runs of it):<br>
+      N - number of spatial dimensions<br>
+      U - total number of time lags (eg, length([maxlag(1):maxlag(2)]))<br>
+      M - number of response sets (or response dimensions)<ul>
+        <li>SR - raw spike-triggered average (correlation between stim and resp)
+        (N x U x M).</li>
+      from<br>
+      multiple runs of it):<br>
+      N - number of spatial dimensions<br>
+            U - total number of time lags (eg, length([maxlag(1):maxlag(2)]))<br>
+      M - number of response sets (or response dimensions)<ul>
+        <li>SR - raw spike-triggered average (correlation between stim and resp)
+        (N x U x M).</li>
+        <li>sSA - spatial autocorrelation matrix (N x N x M or N x N and use the
+        same one for each response set--speeds things up).</li>
+        <li>tSA - temporal autocorrelation matrix (U x U x M or leave empty [],
+        to skip temporal decorrelation).</li>
+        <li>mineigs - vector of minimum eigenvector powers to include in
+        decorrelated kernel estimates. the smaller the number, the more
+        eigenvectors to include. more specifically, for mineigs(ii)=p, include
+        eigenvectors with values eig/sum(eigs) &gt;= p in H(:,:,ii,mm) values &gt;=
+        1.0 give no spatial decorrelation.</li>
+        <li>neigs - if provided, overrides mineigs, forces exact number of
+        eigenvectors to be included in each kernel estimate.</li>
+      </ul>
+      </li>
+      <li>Outputs:<br>
+      H - decorrelated kernel estimate(s), N x U x length(mineigs) x M matrix.<br>
+      neigs - number of eigenvectors included in corresponding decorrelated
+      kernel estimate.</li>
+    </ul>
+    </li>
+  </ul>
+  <ul>
+    <li><a href="../STRF/Audition/dcp_stim.c">dcp_stim</a> (written in C)<ul>
+      <li><code><font face="Courier New">dcp_stim;</font></code></li>
+      <li>Calculate the stimulus auto-correlation.</li>
+    </ul>
+    </li>
+  </ul>
+  <ul>
+    <li><a href="../STRF/Audition/dcp_stim_spike.c">dcp_stim_spike</a> (written
+    in C)<ul>
+      <li><code><font face="Courier New">dcp_stim_spike;</font></code></li>
+      <li>Calculate the stimulus-spike cross correlation.</li>
+    </ul>
+    </li>
+  </ul>
+  <ul>
+    <li><a href="../STRF/Audition/dcp_spike.c">dcp_spike</a> (written in C)<ul>
+      <li><code><font face="Courier New">dcp_spike;</font></code></li>
+      <li>Calculate the spike auto-correlation.</li>
+    </ul>
+    </li>
+  </ul>
+<ul>
+  <li>load_stim(written in C)<ul>
+  <li><code><font face="Courier New">load_stim (matlab script file);</font></code></li>
+  <li>load stimulus auto-correlation. It includes stim_init_count.avg and
+  stim_avg files.</li>
+  </ul>
+  </li>
+  </ul>
+<ul>
+  <li>load_stim_spike (written in C)<ul>
+  <li><code><font face="Courier New">load_stim_spike (matlab script file)</font></code></li>
+  <li>load stimulus and spike cross correlation:&nbsp; stim_init_count.avg and
+  stim_spike_avg.</li>
+  </ul>
+  </li>
+  </ul>
+<ul>
+  <li><a href="../STRF/Audition/fet_mcode/filters2.m">filters2</a><ul>
+  <li><code><font face="Courier New">filters2;</font></code></li>
+  <li>Calculate the filter for a range of tolerance values and give the
+  predictions on new data.</li>
+  </ul>
+  </li>
+  </ul>
+<h2><a name="validation"><b>Validation of STRF</b></h2>
+<ul>
+  <li>&nbsp;</li>
+</ul>
+<hr>
+<h2><a name="output"><b>Displaying Output</b></h2>
+  <ul>
+    <li><a href="../STRF/Vision/DisplayResult/showkern.m">showkern</a>
+    <ul>
+      <li><code><font face="Courier New">showkern(H, kernfmt, iconside, titles);</font></code></li>
+      <li>Input parameters:<ul>
+        <li>H - STRF.</li>
+        <li>kernfmt - domain calculation.</li>
+      </ul>
+      </li>
+      <li>Figure: STRF with actual STRF based on iconside value..</li>
+    </ul>
+    </li>
+  </ul>
+<ul>
+  <li><a href="../STRF/Audition/fet_mcode/filters3.m">filters3</a><ul>
+    <li><code><font face="Courier New">filters3 (matlab script file);</font></code></li>
+    <li>Plot all the results:<ul>
+    <li>Figure 1: Stimulus autocorrelation (or using
+    <a href="../STRF/Audition/fet_mcode/plot_stim.m">plot_stim</a>).</li>
+    <li>Figure 2: Spike train autocorrelation (or using
+    <a href="../STRF/Audition/fet_mcode/plot_spike.m">plot_spike</a>).</li>
+    <li>Figure 3: Smoothed spike-triggered average stimulus for all the deleted
+    one cases (or using <a href="../STRF/Audition/fet_mcode/plot_stim_spike.m">
+    plot_stim_spike</a>).</li>
+    <li>Figure 4: Spike-triggered average stimulus with all files (or using
+    plot_stim_spike).</li>
+    <li>Figure 5: Smoothed spike-triggered average stimulus. (or using
+    <a href="../STRF/Audition/fet_mcode/plot_stim_spike2.m">plot_stim_spike2</a>).</li>
+    <li>Figure 6: The STRF.</li>
+    <li>Figure 7: The significant part of the STRF obtained from Jackknifing.</li>
+    <li>Figure 8: The STRF with a projection along the spectral and temporal
+    axis to evaluate best frequency (BF), best modulation frequency (BMF),
+    latency and bandwith. (or using
+    <a href="../STRF/Audition/fet_mcode/plot_filter.m">plot_filter</a>).</li>
+    <li>Figure 9: Coherence function and correlation coefficient between
+    prediction and actual rate.</li>
+    <li>Figure 10: Scatter plot or prediction versus actaul rate and correlation
+    coefficient (or using <a href="../STRF/Audition/fet_mcode/plot_spike_est.m">
+    plot_spike_est</a>).</li>
+  </ul>
+    </li>
+  </ul>
+  </li>
+</ul>
+
+<hr>
+<i>
+We welcome questions and comments on this web page.  Please send email to <a href="fet@socrates.berkeley.edu">fet@socrates.berkeley.edu</a><br>
+Last Modified: Thursday, 19-Aug-2002<p>
+</i>
+
+                </menu>
+        </menu>
+</menu>
+
+<a href = "index.html"><img src="picture/home.gif" border=1 alt="home">Back to the STRF Software home page</a> <br>
+
+
+</BODY>
+</HTML>

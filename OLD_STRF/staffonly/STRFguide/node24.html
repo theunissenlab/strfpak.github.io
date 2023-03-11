@@ -1,0 +1,181 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with jLaTeX2HTML 2002 (1.62) JA patch-1.4
+patched version by:  Kenshi Muto, Debian Project.
+LaTeX2HTML 2002 (1.62),
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Display Predicted PSTHs Window</TITLE>
+<META NAME="description" CONTENT="Display Predicted PSTHs Window">
+<META NAME="keywords" CONTENT="STRFguide">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="jLaTeX2HTML v2002 JA patch-1.4">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="STRFguide.css">
+
+<LINK REL="next" HREF="node25.html">
+<LINK REL="previous" HREF="node23.html">
+<LINK REL="up" HREF="node14.html">
+<LINK REL="next" HREF="node25.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html395"
+  HREF="node25.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html391"
+  HREF="node14.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html385"
+  HREF="node23.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html393"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html396"
+  HREF="node25.html">Validate</A>
+<B> Up:</B> <A NAME="tex2html392"
+  HREF="node14.html">Application of the STRFPAK</A>
+<B> Previous:</B> <A NAME="tex2html386"
+  HREF="node23.html">Predict</A>
+ &nbsp <B>  <A NAME="tex2html394"
+  HREF="node2.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION006310000000000000000">
+Display Predicted PSTHs Window</A>
+</H2>
+After the prediction stage, we have a predicted PSTH and two PSTHs from
+the actual neuron response. <B>Display Predicted PSTHs Window</B> provides
+a graphical display of these results.
+
+<P>
+Figure&nbsp;<A HREF="node24.html#displaypsth">3.12</A> shows predicted results for the auditory example at
+<!-- MATH
+ $Tol Value\,=\,0.05$
+ -->
+<IMG
+ WIDTH="148" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img61.png"
+ ALT="$Tol Value\,=\,0.05$">. The predicted results for the visual example are
+shown in Figure&nbsp;<A HREF="node24.html#displaypsth-2">3.13</A>.
+The top left panel in the window shows the graph of the input stimulus used
+for prediction. If the spatial domain of the input stimulus is <IMG
+ WIDTH="30" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img20.png"
+ ALT="$1D$">,
+<IMG
+ WIDTH="57" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img62.png"
+ ALT="$x\ axis$"> is time and <IMG
+ WIDTH="56" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img63.png"
+ ALT="$y\ axis$"> is frequency in Hz. 
+If the spatial domain of the input stimulus is <IMG
+ WIDTH="30" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img22.png"
+ ALT="$2D$">,
+it only shows first <IMG
+ WIDTH="23" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img37.png"
+ ALT="$12$"> <IMG
+ WIDTH="30" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img22.png"
+ ALT="$2D$"> video frames in the current version
+of STRFPAK.
+The bottom left panel shows the predicted PSTH together with 
+the two PSTHs from the input response.
+The user can easily see the goodness of fit from this plot.
+The right panel of the window is for information display.
+The tolerance value used for above plots
+is given in the text field of the <B>Tol val</B>.
+If more than one Tol values are used for calculation,
+different Tol. values
+can be shown by pressing <B>Next Tol Val</B>
+and <B>Prev Tol Val</B> buttons.
+The names of stimulus file and
+response file used for the plots in the left panel
+are shown in <B>pred stim file</B> field and
+<B>pred resp file</B> field.
+If more than one stimulus-response files are used for the prediction,
+different files 
+can be shown by pressing <B>Next file</B>
+and <B>Prev file</B> buttons.
+<B>Help</B> and <B>Close</B> buttons are provided in the
+bottom right position of the window.
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="displaypsth"></A><A NAME="235"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 3.12:</STRONG>
+Display prediction results for the auditory example</CAPTION>
+<TR><TD><IMG
+ WIDTH="407" HEIGHT="363" BORDER="0"
+ SRC="img64.png"
+ ALT="\begin{figure}\centerline{\psfig{figure=pstha.ps,width=9cm}}\end{figure}"></TD></TR>
+</TABLE>
+</DIV>
+
+<DIV ALIGN="CENTER"><A NAME="displaypsth-2"></A><A NAME="240"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 3.13:</STRONG>
+Display prediction results for the visual example</CAPTION>
+<TR><TD><IMG
+ WIDTH="407" HEIGHT="363" BORDER="0"
+ SRC="img65.png"
+ ALT="\begin{figure}\centerline{\psfig{figure=psthv.ps,width=9cm}}\end{figure}"></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html395"
+  HREF="node25.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html391"
+  HREF="node14.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html385"
+  HREF="node23.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html393"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html396"
+  HREF="node25.html">Validate</A>
+<B> Up:</B> <A NAME="tex2html392"
+  HREF="node14.html">Application of the STRFPAK</A>
+<B> Previous:</B> <A NAME="tex2html386"
+  HREF="node23.html">Predict</A>
+ &nbsp <B>  <A NAME="tex2html394"
+  HREF="node2.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+
+2003-03-19
+</ADDRESS>
+</BODY>
+</HTML>

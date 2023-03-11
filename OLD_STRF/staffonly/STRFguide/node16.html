@@ -1,0 +1,249 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with jLaTeX2HTML 2002 (1.62) JA patch-1.4
+patched version by:  Kenshi Muto, Debian Project.
+LaTeX2HTML 2002 (1.62),
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Get Datafiles Window</TITLE>
+<META NAME="description" CONTENT="Get Datafiles Window">
+<META NAME="keywords" CONTENT="STRFguide">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="jLaTeX2HTML v2002 JA patch-1.4">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="STRFguide.css">
+
+<LINK REL="next" HREF="node17.html">
+<LINK REL="previous" HREF="node15.html">
+<LINK REL="up" HREF="node14.html">
+<LINK REL="next" HREF="node17.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html299"
+  HREF="node17.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html295"
+  HREF="node14.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html289"
+  HREF="node15.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html297"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html300"
+  HREF="node17.html">Calculation Parameter Window</A>
+<B> Up:</B> <A NAME="tex2html296"
+  HREF="node14.html">Application of the STRFPAK</A>
+<B> Previous:</B> <A NAME="tex2html290"
+  HREF="node15.html">Main Window</A>
+ &nbsp <B>  <A NAME="tex2html298"
+  HREF="node2.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00632000000000000000">
+Get Datafiles Window</A>
+</H2>
+For portability, STRFPAK requires the input data format either in ASCII or
+Matlab binary format, which typically has <IMG
+ WIDTH="34" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img14.png"
+ ALT="$.txt$">, <IMG
+ WIDTH="36" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img15.png"
+ ALT="$.dat$"> or <IMG
+ WIDTH="43" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img16.png"
+ ALT="$.mat$">
+extension. Thus, the raw data from experiment needs to 
+be preprocessed to have these data formats. 
+A stimulus data file contains a spatio-temporal 
+description of a stimulus,
+<IMG
+ WIDTH="54" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3.png"
+ ALT="$s(x,t)$">. A response data file contains
+multiple trials of spike trains, 
+<IMG
+ WIDTH="90" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img17.png"
+ ALT="$r(trials, t)$">. For example, in the auditory system, <IMG
+ WIDTH="54" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3.png"
+ ALT="$s(x,t)$"> represents
+the time-varying amplitude of sound in a frequency band centered at <IMG
+ WIDTH="15" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img4.png"
+ ALT="$x$">. In
+the
+visual system, <IMG
+ WIDTH="54" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3.png"
+ ALT="$s(x,t)$"> represents the light intensity as a function
+of position and time.
+For better prediction, the larger data sets are prefered.
+Figures&nbsp;<A HREF="node16.html#getfilea">3.2</A> and <A HREF="node16.html#getfilev">3.3</A> show the <B>Get Datafiles</B> Windows for 
+the auditory example and the visual example respectively.
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="getfilea"></A><A NAME="93"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 3.2:</STRONG>
+Get datafiles window for the auditory example</CAPTION>
+<TR><TD><IMG
+ WIDTH="362" HEIGHT="326" BORDER="0"
+ SRC="img18.png"
+ ALT="\begin{figure}\centerline{\psfig{figure=getfilea.ps,width=8cm}}\end{figure}"></TD></TR>
+</TABLE>
+</DIV>
+
+<DIV ALIGN="CENTER"><A NAME="getfilev"></A><A NAME="98"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 3.3:</STRONG>
+Get datafiles window for the visual example</CAPTION>
+<TR><TD><IMG
+ WIDTH="362" HEIGHT="326" BORDER="0"
+ SRC="img19.png"
+ ALT="\begin{figure}\centerline{\psfig{figure=getfilev.ps,width=8cm}}\end{figure}"></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+In this window,  
+the user can choose stimulus and response input from the top left panel 
+of the window.
+In this panel, there are two list boxes for stimulus files and response files.
+The list boxes display the files under current directories of the
+stimulus and the response. The user 
+can interactively update these directories for stimulus and 
+response list boxes by clicking
+<B>Update Stim Path</B> or <B>Update Resp Path</B> buttons.
+When user clicks on a list item in the stimulus or the response list box, 
+one of the following happens:
+
+<UL>
+<LI>If the item is a file, the file is selected.
+</LI>
+<LI>If the item is a directory, the GUI reads the contents 
+of that directory into the list box.
+</LI>
+<LI>If the item is a single dot (.), the GUI 
+updates the display of the current directory.
+</LI>
+<LI>If the item is a double dot (..), the GUI changes 
+to the directory up one level and populates the list box with
+the contents of that directory.
+</LI>
+</UL>
+
+<P>
+To select multiple data sets, hold down the CTRL or Shift key while 
+clicking selections. 
+After selecting stimulus files from the stimulus list box and
+response files from the response list box, the user can click
+<B>Add</B> button to check if the file type is allowed and save
+them as global variables for later analysis. They will show on 
+the <B>show data pairs</B> list box if data format is OK.
+The user can remove the selected data files by
+pressing <B>Remove</B> button.
+
+<P>
+After the selection has been done, the user needs to specify data parameters
+in the right bottom panel of the window by clicking
+the pop-up menu <B>Please Choose Spatial Domain</B> and by filling
+in the editable text field. These parameters
+include data sampling rate (in Hz), dimensionality of spatial domain,
+and low and high frequency (in Hz) for <IMG
+ WIDTH="30" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img20.png"
+ ALT="$1D$"> spatial domain.
+For the auditory example, data sampling rate is <IMG
+ WIDTH="42" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img21.png"
+ ALT="$1000$"> Hz,
+the spatial domain is a frequency band so the dimensionality
+of the spatial domain is set as <IMG
+ WIDTH="30" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img20.png"
+ ALT="$1D$">. 
+The low frequency is
+<IMG
+ WIDTH="33" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img7.png"
+ ALT="$250$"> Hz and the high frequency is <IMG
+ WIDTH="42" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img8.png"
+ ALT="$8000$"> Hz since the frequency band expands
+from <IMG
+ WIDTH="33" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img7.png"
+ ALT="$250$"> to <IMG
+ WIDTH="42" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img8.png"
+ ALT="$8000$"> Hz in the above description of the
+auditory experiment. For the visual example,
+the data sampling rate is <IMG
+ WIDTH="23" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img11.png"
+ ALT="$72$"> Hz. The dimensionality of spatial domain is
+<IMG
+ WIDTH="30" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img22.png"
+ ALT="$2D$"> since stimulus is represented as position at time <IMG
+ WIDTH="12" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img23.png"
+ ALT="$t$">. 
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html299"
+  HREF="node17.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html295"
+  HREF="node14.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html289"
+  HREF="node15.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html297"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html300"
+  HREF="node17.html">Calculation Parameter Window</A>
+<B> Up:</B> <A NAME="tex2html296"
+  HREF="node14.html">Application of the STRFPAK</A>
+<B> Previous:</B> <A NAME="tex2html290"
+  HREF="node15.html">Main Window</A>
+ &nbsp <B>  <A NAME="tex2html298"
+  HREF="node2.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+
+2003-03-19
+</ADDRESS>
+</BODY>
+</HTML>

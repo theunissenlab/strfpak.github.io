@@ -1,0 +1,184 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with jLaTeX2HTML 2002 (1.62) JA patch-1.4
+patched version by:  Kenshi Muto, Debian Project.
+LaTeX2HTML 2002 (1.62),
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>STRFPAK: A Spatio-temporal Receptive Field Estimation Software</TITLE>
+<META NAME="description" CONTENT="STRFPAK: A Spatio-temporal Receptive Field Estimation Software">
+<META NAME="keywords" CONTENT="STRFPAK_Manual_Aug_8">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="jLaTeX2HTML v2002 JA patch-1.4">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="STRFPAK_Manual_Aug_8.css">
+
+<LINK REL="next" HREF="node1.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html26"
+  HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up_g.png"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev_g.png"> 
+<A NAME="tex2html24"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html27"
+  HREF="node1.html">Contents</A>
+ &nbsp <B>  <A NAME="tex2html25"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1 ALIGN="CENTER">STRFPAK: A Spatio-temporal Receptive Field Estimation Software</H1>
+<P ALIGN="CENTER"><STRONG>Junli Zhang, Anne Hsu, Stephen David, Patrick Gill, Michael Wu 
+<BR>
+Ryan Prenger, Frederic Theunissen and  Jack Gallant
+<BR>
+Helen Wills Neuroscience Institute/Department of Psychology 
+<BR>
+University of California at Berkeley</STRONG></P>
+<P ALIGN="CENTER"><STRONG>Version 2.0 - May 12, 2004 </STRONG></P>
+
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"></A>
+
+<UL>
+<LI><A NAME="tex2html28"
+  HREF="node1.html">Contents</A>
+<LI><A NAME="tex2html29"
+  HREF="node2.html">List of Figures</A>
+<LI><A NAME="tex2html30"
+  HREF="node3.html">Introduction</A>
+<UL>
+<LI><A NAME="tex2html31"
+  HREF="node4.html">Explanation of the Conventions</A>
+<LI><A NAME="tex2html32"
+  HREF="node5.html">Online Support and Downloading STRFPAK</A>
+<LI><A NAME="tex2html33"
+  HREF="node6.html">Contact Information</A>
+</UL>
+<BR>
+<LI><A NAME="tex2html34"
+  HREF="node7.html">STRFPAK's Design Philosophy</A>
+<UL>
+<LI><A NAME="tex2html35"
+  HREF="node8.html">Ease of Understanding</A>
+<LI><A NAME="tex2html36"
+  HREF="node9.html">Ease of Use</A>
+<LI><A NAME="tex2html37"
+  HREF="node10.html">Portability</A>
+</UL>
+<BR>
+<LI><A NAME="tex2html38"
+  HREF="node11.html">User Manual</A>
+<UL>
+<LI><A NAME="tex2html39"
+  HREF="node12.html">Installing STRFPAK</A>
+<LI><A NAME="tex2html40"
+  HREF="node13.html">Starting STRFPAK</A>
+<LI><A NAME="tex2html41"
+  HREF="node14.html">Getting Help</A>
+<LI><A NAME="tex2html42"
+  HREF="node15.html">STRFPAK's Main Window</A>
+<LI><A NAME="tex2html43"
+  HREF="node16.html">Get Input</A>
+<UL>
+<LI><A NAME="tex2html44"
+  HREF="node17.html">Data Formats and Dimension Layout Requirement</A>
+<LI><A NAME="tex2html45"
+  HREF="node18.html">The Preprocessing Menu</A>
+<LI><A NAME="tex2html46"
+  HREF="node19.html">Short Time Fourier Transform</A>
+<LI><A NAME="tex2html47"
+  HREF="node20.html">Wavelet Transforms</A>
+<LI><A NAME="tex2html48"
+  HREF="node21.html">Getting Input</A>
+<LI><A NAME="tex2html49"
+  HREF="node22.html">Parameters</A>
+<LI><A NAME="tex2html50"
+  HREF="node23.html">Displaying Input</A>
+</UL>
+<LI><A NAME="tex2html51"
+  HREF="node24.html">Estimating the STRF</A>
+<UL>
+<LI><A NAME="tex2html52"
+  HREF="node25.html">Calculating the STRF</A>
+<LI><A NAME="tex2html53"
+  HREF="node26.html">STRFPAK's Calculation Implementation</A>
+<LI><A NAME="tex2html54"
+  HREF="node27.html">References for STRFPAK's Calculation</A>
+<LI><A NAME="tex2html55"
+  HREF="node28.html">Display StimStat</A>
+<LI><A NAME="tex2html56"
+  HREF="node29.html">Display STRF</A>
+<LI><A NAME="tex2html57"
+  HREF="node30.html">Reference for STRFPAK's Modulation Spectrum</A>
+</UL>
+<LI><A NAME="tex2html58"
+  HREF="node31.html">Prediction</A>
+<UL>
+<LI><A NAME="tex2html59"
+  HREF="node32.html">Get PredFiles</A>
+<LI><A NAME="tex2html60"
+  HREF="node33.html">Prediction</A>
+<LI><A NAME="tex2html61"
+  HREF="node34.html">Displaying PrePSTH (the predicted PSTH)</A>
+</UL>
+<LI><A NAME="tex2html62"
+  HREF="node35.html">Validate</A>
+<UL>
+<LI><A NAME="tex2html63"
+  HREF="node36.html">Validate</A>
+<LI><A NAME="tex2html64"
+  HREF="node37.html">Validation Reference in STRFPAK</A>
+<LI><A NAME="tex2html65"
+  HREF="node38.html">Display Info</A>
+<LI><A NAME="tex2html66"
+  HREF="node39.html">Display BestStrf</A>
+</UL>
+<LI><A NAME="tex2html67"
+  HREF="node40.html">Load Prev Result</A>
+</UL>
+<BR>
+<LI><A NAME="tex2html68"
+  HREF="node41.html">Batch-mode/Nongraphical processing option</A>
+<LI><A NAME="tex2html69"
+  HREF="node42.html">Summary and Things to do</A>
+<LI><A NAME="tex2html70"
+  HREF="node43.html">Glossary</A>
+<LI><A NAME="tex2html71"
+  HREF="node44.html">A list of Main Functions</A>
+<LI><A NAME="tex2html72"
+  HREF="node45.html">Quick Guide to Run STRFPAK</A>
+<LI><A NAME="tex2html73"
+  HREF="node46.html">Bibliography</A>
+<LI><A NAME="tex2html74"
+  HREF="node47.html">About this document ...</A>
+</UL>
+<!--End of Table of Child-Links-->
+<BR><HR>
+<ADDRESS>
+
+2004-08-09
+</ADDRESS>
+</BODY>
+</HTML>

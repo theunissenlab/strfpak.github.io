@@ -1,0 +1,123 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with jLaTeX2HTML 2002 (1.62) JA patch-1.4
+patched version by:  Kenshi Muto, Debian Project.
+LaTeX2HTML 2002 (1.62),
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Predict</TITLE>
+<META NAME="description" CONTENT="Predict">
+<META NAME="keywords" CONTENT="STRFguide">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="jLaTeX2HTML v2002 JA patch-1.4">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="STRFguide.css">
+
+<LINK REL="next" HREF="node24.html">
+<LINK REL="previous" HREF="node22.html">
+<LINK REL="up" HREF="node14.html">
+<LINK REL="next" HREF="node24.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html383"
+  HREF="node24.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html379"
+  HREF="node14.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html373"
+  HREF="node22.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html381"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html384"
+  HREF="node24.html">Display Predicted PSTHs Window</A>
+<B> Up:</B> <A NAME="tex2html380"
+  HREF="node14.html">Application of the STRFPAK</A>
+<B> Previous:</B> <A NAME="tex2html374"
+  HREF="node22.html">Get Datafiles for Prediction</A>
+ &nbsp <B>  <A NAME="tex2html382"
+  HREF="node2.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00639000000000000000">
+Predict</A>
+</H2>
+
+<P>
+STRFPAK predicts neuron response by using stimulus which
+is provided by the user and the estimated STRF from
+above calculation.
+Whether estimated Jackknifed
+STRF or estimated STRF is used are based on the value
+of <IMG
+ WIDTH="97" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img56.png"
+ ALT="$watch \ flag$">. The equation is given as:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\hat{r}[t] = \sum_{i=0}^{MN-1} h[i]s_t[i]
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="156" HEIGHT="59" BORDER="0"
+ SRC="img58.png"
+ ALT="\begin{displaymath}\hat{r}[t] = \sum_{i=0}^{MN-1} h[i]s_t[i]\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+where the <!-- MATH
+ $h[i]=[h_0,...,h_{NM-1}]^T$
+ -->
+<IMG
+ WIDTH="184" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img59.png"
+ ALT="$h[i]=[h_0,...,h_{NM-1}]^T$"> vector is
+the linear coefficient describing
+the linear estimator and <IMG
+ WIDTH="36" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img60.png"
+ ALT="$s_t[i]$"> are stimulus for prediction.
+Both the stimulus and the response are
+sampled at particular points in time <IMG
+ WIDTH="12" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img23.png"
+ ALT="$t$">.
+In this stage, STRFPAK also reorganizes multiple trials of
+spike trains into two groups and then compute PSTH for each
+group. The results of these two PSTHs and predicted PSTH
+will be used for later validation.
+
+<P>
+When all calculations are done, small ``Done Prediction''
+window appears. 
+
+<P>
+<BR><HR>
+<ADDRESS>
+
+2003-03-19
+</ADDRESS>
+</BODY>
+</HTML>

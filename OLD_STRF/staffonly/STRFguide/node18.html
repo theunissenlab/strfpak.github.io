@@ -1,0 +1,196 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with jLaTeX2HTML 2002 (1.62) JA patch-1.4
+patched version by:  Kenshi Muto, Debian Project.
+LaTeX2HTML 2002 (1.62),
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Display Input Window</TITLE>
+<META NAME="description" CONTENT="Display Input Window">
+<META NAME="keywords" CONTENT="STRFguide">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="jLaTeX2HTML v2002 JA patch-1.4">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="STRFguide.css">
+
+<LINK REL="next" HREF="node19.html">
+<LINK REL="previous" HREF="node17.html">
+<LINK REL="up" HREF="node14.html">
+<LINK REL="next" HREF="node19.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html323"
+  HREF="node19.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html319"
+  HREF="node14.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html313"
+  HREF="node17.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html321"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html324"
+  HREF="node19.html">Estimate</A>
+<B> Up:</B> <A NAME="tex2html320"
+  HREF="node14.html">Application of the STRFPAK</A>
+<B> Previous:</B> <A NAME="tex2html314"
+  HREF="node17.html">Calculation Parameter Window</A>
+ &nbsp <B>  <A NAME="tex2html322"
+  HREF="node2.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00634000000000000000">
+Display Input Window</A>
+</H2>
+For convenience, STRFPAK provides graphical display of the
+input data in the <B>Display Input</B> window. The user can check whether
+the selected input data is good or not for later estimation and analysis.
+Figure&nbsp;<A HREF="node18.html#fig3">3.6</A> shows
+spectrographic representation of the stimulus, <IMG
+ WIDTH="23" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img35.png"
+ ALT="$10$"> trials of neuron
+response and its post-stimulus time histogram (PSTH) for the auditory example.
+
+<DIV ALIGN="CENTER"><A NAME="fig3"></A><A NAME="139"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 3.6:</STRONG>
+Display auditory input data</CAPTION>
+<TR><TD><IMG
+ WIDTH="408" HEIGHT="444" BORDER="0"
+ SRC="img36.png"
+ ALT="\begin{figure}\centerline{\psfig{figure=inputa.ps,width=9cm}}\end{figure}"></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+Figure&nbsp;<A HREF="node18.html#inputv">3.7</A> shows first <IMG
+ WIDTH="23" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img37.png"
+ ALT="$12$"> frames of natural scenes used in
+the above visual example, one single trial 
+(since we have only one trial here) 
+and its PSTH.
+
+<DIV ALIGN="CENTER"><A NAME="inputv"></A><A NAME="145"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 3.7:</STRONG>
+Display visual input data</CAPTION>
+<TR><TD><IMG
+ WIDTH="408" HEIGHT="444" BORDER="0"
+ SRC="img38.png"
+ ALT="\begin{figure}\centerline{\psfig{figure=inputv.ps,width=9cm}}\end{figure}"></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+In the figures, the left panel of the window is graphical display
+of the stimulus, <IMG
+ WIDTH="23" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img35.png"
+ ALT="$10$"> trials of spike trains and the smoothed PSTH.
+
+<UL>
+<LI>Plot of stimulus file: 
+<BR>
+If the dimensionality of the spatial domain is <IMG
+ WIDTH="30" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img20.png"
+ ALT="$1D$">,
+    x-axis is time (in seconds) and               
+    y-axis is frequency in Hz. 
+     If the dimensionality of
+spatial domain is <IMG
+ WIDTH="30" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img22.png"
+ ALT="$2D$">,
+    the first <IMG
+ WIDTH="23" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img37.png"
+ ALT="$12$"> video frames show up. For the current version of STRFPAK, 
+we only show the first <IMG
+ WIDTH="23" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img37.png"
+ ALT="$12$"> frames.
+</LI>
+<LI>Plot of spike trains (in the sequence of time):
+<BR>
+Note: We only display 10 trials for the current
+version of STRFPAK. 
+If we have more than 10 trials, we display the first 10 trials.        
+</LI>
+<LI>Plot of smoothed psth (in time domain): 
+<BR>
+Note: If we have single trail spike train, we take its    
+                    psth as itself. Otherwise, we compute the average of 
+multiple trials as their psth. The smoothed psth is computed as a
+covariance between raw psth and a Hanning window. 
+
+<P>
+</LI>
+</UL>
+
+<P>
+The right panel shows information of the figures displayed in the left panel.
+The user can choose <B>prev</B> or <B>next</B> button
+to display different data sets
+if multiple data pairs are selected.   
+The stimulus text field and the response text field and the
+spatial-domain text field 
+show the corresponding input data pair files are displayed in the 
+left panel plots.
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html323"
+  HREF="node19.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html319"
+  HREF="node14.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html313"
+  HREF="node17.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html321"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html324"
+  HREF="node19.html">Estimate</A>
+<B> Up:</B> <A NAME="tex2html320"
+  HREF="node14.html">Application of the STRFPAK</A>
+<B> Previous:</B> <A NAME="tex2html314"
+  HREF="node17.html">Calculation Parameter Window</A>
+ &nbsp <B>  <A NAME="tex2html322"
+  HREF="node2.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+
+2003-03-19
+</ADDRESS>
+</BODY>
+</HTML>

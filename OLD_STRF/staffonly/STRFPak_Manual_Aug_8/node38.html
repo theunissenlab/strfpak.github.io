@@ -1,0 +1,187 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with jLaTeX2HTML 2002 (1.62) JA patch-1.4
+patched version by:  Kenshi Muto, Debian Project.
+LaTeX2HTML 2002 (1.62),
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Display Info</TITLE>
+<META NAME="description" CONTENT="Display Info">
+<META NAME="keywords" CONTENT="STRFPAK_Manual_Aug_8">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="jLaTeX2HTML v2002 JA patch-1.4">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="STRFPAK_Manual_Aug_8.css">
+
+<LINK REL="next" HREF="node39.html">
+<LINK REL="previous" HREF="node37.html">
+<LINK REL="up" HREF="node35.html">
+<LINK REL="next" HREF="node39.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html618"
+  HREF="node39.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html614"
+  HREF="node35.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html608"
+  HREF="node37.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html616"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html619"
+  HREF="node39.html">Display BestStrf</A>
+<B> Up:</B> <A NAME="tex2html615"
+  HREF="node35.html">Validate</A>
+<B> Previous:</B> <A NAME="tex2html609"
+  HREF="node37.html">Validation Reference in STRFPAK</A>
+ &nbsp <B>  <A NAME="tex2html617"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00583000000000000000">
+Display Info</A>
+</H2>
+Once the <!-- MATH
+ $\fbox{Display Info}$
+ -->
+<IMG
+ WIDTH="115" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="img118.png"
+ ALT="\fbox{Display Info}"> button is clicked, the <B>Display CorrCoef/Info</B> window shows up. This option displays both goodness of fit measures used by STRFPAK.
+The layout of the window is the same as before. The left panel shows the
+graphical display and the right panel shows all the information about the
+results on the left. In the right panel, there are three display options. They are:
+
+<DIV ALIGN="CENTER"><A NAME="cca"></A><A NAME="422"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 3.19:</STRONG>
+Predicted cc and cc for the auditory example</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="575" HEIGHT="477" ALIGN="BOTTOM" BORDER="0"
+ SRC="img119.png"
+ ALT="\includegraphics[width=5in]{figures/cca.ps}"></DIV></TD></TR>
+</TABLE>
+</DIV>
+
+<DIV ALIGN="CENTER"><A NAME="infoa"></A><A NAME="427"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 3.20:</STRONG>
+Predicted coherence and coherence for the auditory example</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="575" HEIGHT="477" ALIGN="BOTTOM" BORDER="0"
+ SRC="img120.png"
+ ALT="\includegraphics[width=5in]{figures/infoa.ps}"></DIV></TD></TR>
+</TABLE>
+</DIV>
+
+<UL>
+<LI><B>Corr Coef (r)</B>: This option is the default option. Figure&nbsp;<A HREF="node38.html#cca">3.19</A>
+is an example of this option. In the left panel, the top figure is a
+plot of the original and predicted correlation coefficient as a function of 
+smoothing window width. The original correlation coefficient an estimate of the correlation expected between one spike train and the PSTH given infinite data. The bottom figure
+is the <B>CC_Ratio</B>, which is the ratio of the predicted <IMG
+ WIDTH="14" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img121.png"
+ ALT="$r$"> and the
+original <IMG
+ WIDTH="14" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img121.png"
+ ALT="$r$">. The right panel shows the <IMG
+ WIDTH="70" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img122.png"
+ ALT="$Tol\ Val$"> of the current STRF used for prediction. <IMG
+ WIDTH="55" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="img20.png"
+ ALT="\fbox{Next}"> and <IMG
+ WIDTH="54" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="img21.png"
+ ALT="\fbox{Prev}"> buttons take you to the results generated from each <IMG
+ WIDTH="70" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img122.png"
+ ALT="$Tol\ Val$">.
+</LI>
+<LI><B>Info Values</B>: Figure&nbsp;<A HREF="node38.html#infoa">3.20</A>
+is an example of this option. In the left panel, the top figure is a
+plot of the predicted coherence as a function of frequency. <B>Info</B> values
+are obtained by integrating coherence over the whole frequency range.
+The bottom figure is the plot of raw coherence as a function of frequency.
+The red and green lines in the plots refer to the upper and lower bounds of the estimated coherence.
+The <IMG
+ WIDTH="55" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="img20.png"
+ ALT="\fbox{Next}"> and <IMG
+ WIDTH="54" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="img21.png"
+ ALT="\fbox{Prev}"> buttons take you to the results generated from each <IMG
+ WIDTH="70" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img122.png"
+ ALT="$Tol\ Val$">.
+</LI>
+<LI><B>Info/r vs Tol Val</B>: This option plots the information value as
+a function of <IMG
+ WIDTH="70" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img122.png"
+ ALT="$Tol\ Val$"> in the left top panel and the correlation
+coefficient as a function of <IMG
+ WIDTH="70" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img122.png"
+ ALT="$Tol\ Val$"> in the left bottom panel.
+</LI>
+</UL><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html618"
+  HREF="node39.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html614"
+  HREF="node35.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html608"
+  HREF="node37.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html616"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html619"
+  HREF="node39.html">Display BestStrf</A>
+<B> Up:</B> <A NAME="tex2html615"
+  HREF="node35.html">Validate</A>
+<B> Previous:</B> <A NAME="tex2html609"
+  HREF="node37.html">Validation Reference in STRFPAK</A>
+ &nbsp <B>  <A NAME="tex2html617"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+
+2004-08-09
+</ADDRESS>
+</BODY>
+</HTML>

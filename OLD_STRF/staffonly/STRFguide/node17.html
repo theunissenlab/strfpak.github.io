@@ -1,0 +1,190 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with jLaTeX2HTML 2002 (1.62) JA patch-1.4
+patched version by:  Kenshi Muto, Debian Project.
+LaTeX2HTML 2002 (1.62),
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Calculation Parameter Window</TITLE>
+<META NAME="description" CONTENT="Calculation Parameter Window">
+<META NAME="keywords" CONTENT="STRFguide">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="jLaTeX2HTML v2002 JA patch-1.4">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="STRFguide.css">
+
+<LINK REL="next" HREF="node18.html">
+<LINK REL="previous" HREF="node16.html">
+<LINK REL="up" HREF="node14.html">
+<LINK REL="next" HREF="node18.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html311"
+  HREF="node18.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html307"
+  HREF="node14.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html301"
+  HREF="node16.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html309"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html312"
+  HREF="node18.html">Display Input Window</A>
+<B> Up:</B> <A NAME="tex2html308"
+  HREF="node14.html">Application of the STRFPAK</A>
+<B> Previous:</B> <A NAME="tex2html302"
+  HREF="node16.html">Get Datafiles Window</A>
+ &nbsp <B>  <A NAME="tex2html310"
+  HREF="node2.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00633000000000000000">
+Calculation Parameter Window</A>
+</H2>
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fig2"></A><A NAME="112"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 3.4:</STRONG>
+Calculation parameter window for the auditory example</CAPTION>
+<TR><TD><IMG
+ WIDTH="317" HEIGHT="317" BORDER="0"
+ SRC="img24.png"
+ ALT="\begin{figure}\centerline{\psfig{figure=calcparaa.ps,width=7cm}}\end{figure}"></TD></TR>
+</TABLE>
+</DIV>
+
+<DIV ALIGN="CENTER"><A NAME="calcparv"></A><A NAME="117"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 3.5:</STRONG>
+Calculation parameter window for the visual example</CAPTION>
+<TR><TD><IMG
+ WIDTH="317" HEIGHT="317" BORDER="0"
+ SRC="img25.png"
+ ALT="\begin{figure}\centerline{\psfig{figure=calcparv.ps,width=7cm}}\end{figure}"></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+Figures&nbsp;<A HREF="node17.html#fig2">3.4</A> and&nbsp;<A HREF="node17.html#calcparv">3.5</A> show the 
+<B>Calculation Parameter Window</B> for
+the auditory example and the visual example.
+There are two calculation parameters required for STRFPAK:
+<B>TimeLag</B> and <B>Tolerance value</B>.
+By clicking the <B>TimeLag</B> or <B>Tolerance value</B> button, a small
+information window will show up to explain the meaning and
+the format for the input text field.
+The <B>TimeLag</B> is a time-lag used for computing
+the stimulus auto-correlation and the stimulus-response cross correlation.
+For example, since the bin size for the above auditory data is <IMG
+ WIDTH="14" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$1$"> ms, 
+the time course covers a period of <IMG
+ WIDTH="48" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img26.png"
+ ALT="$\pm 300$"> ms if we set 
+<B>TimeLag</B> as <IMG
+ WIDTH="33" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img27.png"
+ ALT="$300$">.
+For the visual example, the bin size is <IMG
+ WIDTH="23" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img28.png"
+ ALT="$14$"> ms, the time course
+covers a period of <IMG
+ WIDTH="38" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img29.png"
+ ALT="$\pm70$"> ms if we set <B>TimeLag</B> as <IMG
+ WIDTH="14" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img30.png"
+ ALT="$5$">.
+If the larger range is needed, <B>TimeLag</B> is needed to be 
+larger value. 
+
+<P>
+<B>Tolerance value</B> is a list of real values used to select 
+eigenvalue cutoff for pseudo-inverse of the stimulus auto-correlation
+matrix. Its value should be less than <IMG
+ WIDTH="14" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$1$">. For example, if 
+<B>Tolerance value</B> is <IMG
+ WIDTH="29" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img31.png"
+ ALT="$0.1$">, that means top <IMG
+ WIDTH="39" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img32.png"
+ ALT="$90\%$"> eigenvalues are
+used for calculating inverse of the auto-correlation matrix. 
+The <B>Tolerance value</B> is usually set as a list of values
+to check the sensitivity of the final results to the tolerance
+values.
+In the above examples, we have set <IMG
+ WIDTH="65" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img33.png"
+ ALT="$Tol \ val$"> as 
+<!-- MATH
+ $0.1\ 0.05\ 0.001\ 0.0005$
+ -->
+<IMG
+ WIDTH="175" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img34.png"
+ ALT="$0.1\ 0.05\ 0.001\ 0.0005$">.
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html311"
+  HREF="node18.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html307"
+  HREF="node14.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html301"
+  HREF="node16.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html309"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html312"
+  HREF="node18.html">Display Input Window</A>
+<B> Up:</B> <A NAME="tex2html308"
+  HREF="node14.html">Application of the STRFPAK</A>
+<B> Previous:</B> <A NAME="tex2html302"
+  HREF="node16.html">Get Datafiles Window</A>
+ &nbsp <B>  <A NAME="tex2html310"
+  HREF="node2.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+
+2003-03-19
+</ADDRESS>
+</BODY>
+</HTML>

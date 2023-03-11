@@ -1,0 +1,213 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with jLaTeX2HTML 2002 (1.62) JA patch-1.4
+patched version by:  Kenshi Muto, Debian Project.
+LaTeX2HTML 2002 (1.62),
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Validate</TITLE>
+<META NAME="description" CONTENT="Validate">
+<META NAME="keywords" CONTENT="STRFPAK_Manual_Aug_8">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="jLaTeX2HTML v2002 JA patch-1.4">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="STRFPAK_Manual_Aug_8.css">
+
+<LINK REL="next" HREF="node37.html">
+<LINK REL="previous" HREF="node35.html">
+<LINK REL="up" HREF="node35.html">
+<LINK REL="next" HREF="node37.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html594"
+  HREF="node37.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html590"
+  HREF="node35.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html584"
+  HREF="node35.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html592"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html595"
+  HREF="node37.html">Validation Reference in STRFPAK</A>
+<B> Up:</B> <A NAME="tex2html591"
+  HREF="node35.html">Validate</A>
+<B> Previous:</B> <A NAME="tex2html585"
+  HREF="node35.html">Validate</A>
+ &nbsp <B>  <A NAME="tex2html593"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00581000000000000000">
+Validate</A>
+</H2>
+To quantify the goodness of fit of the estimated STRF, STRFPAK implements
+two measures: the coherence and the correlation
+coefficient. The coherence is a function of frequency and is given by:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\gamma^2(\omega) = \frac{<R(\omega) \hat{R}(\omega)^{*}><R(\omega)^{*} \hat{R}(\omega)>}
+{<R(\omega) R(\omega)^{*}><\hat{R}(\omega) \hat{R}(\omega)^{*}>}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="332" HEIGHT="58" BORDER="0"
+ SRC="img107.png"
+ ALT="\begin{displaymath}
+\gamma^2(\omega) = \frac{&lt;R(\omega) \hat{R}(\omega)^{*}&gt;&lt;R(...
+...(\omega) R(\omega)^{*}&gt;&lt;\hat{R}(\omega) \hat{R}(\omega)^{*}&gt;}
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+Here <IMG
+ WIDTH="46" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img108.png"
+ ALT="$R(\omega)$"> and <!-- MATH
+ $\hat{R}(\omega)$
+ -->
+<IMG
+ WIDTH="46" HEIGHT="44" ALIGN="MIDDLE" BORDER="0"
+ SRC="img109.png"
+ ALT="$\hat{R}(\omega)$"> are actual and predicted neuron responses
+at each temporal frequency, <IMG
+ WIDTH="17" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img110.png"
+ ALT="$\omega$">. An overall goodness-of-fit estimate, <IMG
+ WIDTH="14" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img111.png"
+ ALT="$I$">,
+is obtained by integrating the coherence function. <IMG
+ WIDTH="14" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img111.png"
+ ALT="$I$"> can be thought of as the mutual information between the prediction and the response, and is often called info for short.  The lower bound of <IMG
+ WIDTH="14" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img111.png"
+ ALT="$I$"> is obtained if the noise follows a Gaussian distribution and the upper bound
+is obtained if the neuron response is a Gaussian.
+
+The correlation coefficient(<IMG
+ WIDTH="21" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img112.png"
+ ALT="$cc$">) between <IMG
+ WIDTH="35" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img113.png"
+ ALT="$r(t)$"> and <IMG
+ WIDTH="35" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img114.png"
+ ALT="$\hat{r}(t)$"> is
+calculated based on:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+cc = \frac{<(r(t) - \bar{r(t)}) (\hat{r}(t) - \bar{\hat{r}(t)})>}
+    {\sqrt{<(r(t) - \bar{r(t)})^2><(\hat{r}(t) - \bar{\hat{r}(t)})^2>}}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="351" HEIGHT="63" BORDER="0"
+ SRC="img115.png"
+ ALT="\begin{displaymath}
+cc = \frac{&lt;(r(t) - \bar{r(t)}) (\hat{r}(t) - \bar{\hat{r}(...
+...{&lt;(r(t) - \bar{r(t)})^2&gt;&lt;(\hat{r}(t) - \bar{\hat{r}(t)})^2&gt;}}
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+Here <IMG
+ WIDTH="35" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img113.png"
+ ALT="$r(t)$"> and <IMG
+ WIDTH="35" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img114.png"
+ ALT="$\hat{r}(t)$"> are actual and predicted neuron
+responses. Since <IMG
+ WIDTH="21" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img112.png"
+ ALT="$cc$"> depends on the time bin that is used to
+obtain <IMG
+ WIDTH="35" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img113.png"
+ ALT="$r(t)$"> from the PSTH, STRFPAK only
+generates a <IMG
+ WIDTH="21" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img112.png"
+ ALT="$cc$"> between similar time windows. 
+When all calculations are done, a small ``Done Prediction''
+window appears.
+
+The details of how to measure the goodness of fit are beyond the scope of this manual.  STRFPAK uses an unbiased measure of how well the prediction would match the true PSTH given infinite data size.  To do this, STRFPAK compares how well one spike train is expected to fit the extrapolated infinite data PSTH versus how well one spike train is expected to fit the prediction. The first of these is the ``r'' displayed in the cc window, the second is the ``r predicted''.  The ratio of ``r predicted'' to ``r'' is called the cc ratio.  A perfectly linear neuron characterized perfectly by a STRF should have a cc ratio of 1.
+
+The cc ratio will be a function of the smoothing window size.  Depending on the researchers perspective, it may be most appropriate to look at the cc ratio of the cells at the smoothing window giving the maximum cc ratio, or it may be better to impose a fixed smoothing window length so that comparisons across many cells are more fair.  STRFPAK calles the first <!-- MATH
+ $max\_CC\_ratio$
+ -->
+<IMG
+ WIDTH="125" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img116.png"
+ ALT="$max\_CC\_ratio$"> and the second <!-- MATH
+ $const\_CC\_ratio$
+ -->
+<IMG
+ WIDTH="132" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img117.png"
+ ALT="$const\_CC\_ratio$">.  The built-in smoothing width used bt STRFPAK is 21 ms.
+
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html594"
+  HREF="node37.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html590"
+  HREF="node35.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html584"
+  HREF="node35.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html592"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html595"
+  HREF="node37.html">Validation Reference in STRFPAK</A>
+<B> Up:</B> <A NAME="tex2html591"
+  HREF="node35.html">Validate</A>
+<B> Previous:</B> <A NAME="tex2html585"
+  HREF="node35.html">Validate</A>
+ &nbsp <B>  <A NAME="tex2html593"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+
+2004-08-09
+</ADDRESS>
+</BODY>
+</HTML>

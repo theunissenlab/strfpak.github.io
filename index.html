@@ -1,0 +1,561 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <meta name="description" content="STRFPak STRF Estimation Software">
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <meta name="keywords" content="">
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <meta name="author" content="J.L. Gallant, F.E. Theunissen">
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <link rel="stylesheet" type="text/css" href="andreas02.css" media="screen,projection" title="andreas02 (screen)">
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <link rel="stylesheet" type="text/css" href="print.css" media="print">
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <title>STRFPak</title>
+</head>
+
+
+<body>
+
+
+
+
+
+
+
+
+
+
+<div id="toptabs">
+<p>Sites:
+<a class="activetoptab" href="index.html">STRFPak</a><span class="hide"> | </span>
+<a class="toptab" href="http://neuralprediction.berkeley.edu">Challenge</a><span class="hide"> | </span>
+</p>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+<div id="container">
+<div id="logo"><!-- <h1><center><a href="index.html">TITLE</a></center></h1> -->
+</div>
+
+
+
+
+
+
+
+
+
+
+<div id="navitabs">
+<a class="activenavitab" href="index.html">Overview</a><span class="hide"> | </span>
+<a class="navitab" href="dem.html">Demo</a><span class="hide"> | </span>
+<a class="navitab" href="dow.html">Download</a><span class="hide"> | </span>
+<a class="navitab" href="faq.html">FAQ</a><span class="hide"> | </span>
+<a class="navitab" href="ref.html">References</a><span class="hide"> | </span>
+<a class="navitab" href="gal.html">Gallery</a><span class="hide"> | </span>
+<a class="navitab" href="contact.html">Contact</a><span class="hide"> | </span></div>
+
+
+
+
+
+
+
+
+
+
+<div id="desc">
+<!-- <h2>SUMMARY</h2> --></div>
+
+
+
+
+
+
+
+
+
+
+<div id="main">
+<h3>Introduction and Overview</h3>
+
+
+
+
+
+
+
+
+
+
+<p>STRFPak is a Matlab toolbox for estimating the linear and
+nonlinear
+stimulus-response mapping function of sensory systems. This mapping
+function is commonly called the spatio- or spectro-temporal receptive
+field (STRF). A quantitative estimate of the STRF can be used in
+subsequent computational modeling studies or to predict future
+responses of the system. STRFPak implements several general STRF
+estimation techniques and can be used with any stimuli (including
+natural scenes and sounds).</p>
+
+
+
+
+
+
+
+
+
+
+<p>The theoretical basis for STRF estimation has been known for
+some
+time, but estimation software has not been widely available. This
+project aims to develop appropriate software and make it available to
+the wider community of sensory neuroscientists. Although STRFPak is
+based on established methods it incorporates two important innovations.
+First, STRFPak can be used to characterize a sensory system from its
+response to arbitrary stimuli including natural signals (e.g.,
+vocalizations, natural scenes). Second, STRFPak incorporates several
+methods for estimating nonlinear STRFs. STRFPak also includes tutorial
+examples and documentation.</p>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+<div id="sidebar">
+<hr>
+<h4>News:</h4>
+
+
+
+
+
+
+
+
+
+
+<p>
+<img src="http://socrates.berkeley.edu/%7Ejunli/OLD_STRF/picture/new1.gif"> Try out the <a href="http://strfpak-wiki.berkeley.edu/mediawiki/index.php/Main_Page">STRFPAK wiki</a> for documentation. &nbsp;Use the same username and password for downloading STRFPAK.</p>
+
+
+<p><a href="dow.html">STRFPAK version 5.3</a> is now
+available to registered users.&nbsp;<a href="mailto:theunissen@berkeley.edu">Email Frederic</a>
+to register.&nbsp;&nbsp;</p>
+
+
+
+
+
+
+
+
+
+
+<p>Version 5.x highlights:</p>
+
+
+
+
+
+
+
+
+
+
+<ul>
+
+
+
+
+
+
+
+
+
+
+  <li>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <p>More honest validation</p>
+
+
+
+
+
+
+
+
+
+
+  </li>
+
+
+
+
+
+
+
+
+
+
+  <li>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <p>More intuitive work flow</p>
+
+
+
+
+
+
+
+
+
+
+  </li>
+
+
+
+
+
+
+
+
+
+
+  <li>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <p>More flexible than ever</p>
+
+
+
+
+
+
+
+
+
+
+  </li>
+
+
+
+
+
+
+
+
+
+
+</ul>
+
+
+
+
+
+
+
+
+
+
+<hr>
+<h4>Links out:</h4>
+
+
+
+
+
+
+
+
+
+
+<p><a class="sidelink" href="http://www.nimh.nih.gov/neuroinformatics/index.cfm">Human
+Brain Project</a><span class="hide"> | </span>
+<a class="sidelink" href="http://senselab.med.yale.edu/senselab/ModelDB/default.asp">ModelDB</a><span class="hide"> | </span>
+<a class="sidelink" href="http://www.neurotree.org">Neurotree</a><span class="hide"> | </span>
+</p>
+
+
+
+
+
+
+
+
+
+
+<br>
+
+
+
+
+
+
+
+
+
+
+<p>This project is supported by the NIH Human Brain Project:
+<img class="photo" src="images/nimh.logo.jpg" alt="" height="102" width="130"></p>
+
+
+
+
+
+
+
+
+
+
+<br>
+
+
+
+
+
+
+
+
+
+
+<p><br>
+
+
+
+
+</p>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+<div id="footer">Copyright &copy; 2007 UC Regents;
+modified from a design by Andreas Viklund.
+</div>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

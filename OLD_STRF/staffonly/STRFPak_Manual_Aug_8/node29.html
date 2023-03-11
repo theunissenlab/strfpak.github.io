@@ -1,0 +1,207 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with jLaTeX2HTML 2002 (1.62) JA patch-1.4
+patched version by:  Kenshi Muto, Debian Project.
+LaTeX2HTML 2002 (1.62),
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Display STRF</TITLE>
+<META NAME="description" CONTENT="Display STRF">
+<META NAME="keywords" CONTENT="STRFPAK_Manual_Aug_8">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="jLaTeX2HTML v2002 JA patch-1.4">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="STRFPAK_Manual_Aug_8.css">
+
+<LINK REL="next" HREF="node30.html">
+<LINK REL="previous" HREF="node28.html">
+<LINK REL="up" HREF="node24.html">
+<LINK REL="next" HREF="node30.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html507"
+  HREF="node30.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html503"
+  HREF="node24.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html497"
+  HREF="node28.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html505"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html508"
+  HREF="node30.html">Reference for STRFPAK's Modulation</A>
+<B> Up:</B> <A NAME="tex2html504"
+  HREF="node24.html">Estimating the STRF</A>
+<B> Previous:</B> <A NAME="tex2html498"
+  HREF="node28.html">Display StimStat</A>
+ &nbsp <B>  <A NAME="tex2html506"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00565000000000000000">
+Display STRF</A>
+</H2>
+
+In the toolbox, there are four display/analysis options once the <!-- MATH
+ $\fbox{Display STRF}$
+ -->
+<IMG
+ WIDTH="133" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="img81.png"
+ ALT="\fbox{Display STRF}">
+button is clicked. The STRFPAK team is planning to add more options. The options
+available when you click the popup menu on the window include:
+
+<DIV ALIGN="CENTER"><A NAME="strfa"></A><A NAME="304"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 3.12:</STRONG>
+Display STRF: STRF only</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="575" HEIGHT="556" ALIGN="BOTTOM" BORDER="0"
+ SRC="img82.png"
+ ALT="\includegraphics[width=5in]{figures/strfa.ps}"></DIV></TD></TR>
+</TABLE>
+</DIV>
+
+<DIV ALIGN="CENTER"><A NAME="strfa_2"></A><A NAME="309"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 3.13:</STRONG>
+Display STRF: STRF projection on two axes </CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="575" HEIGHT="555" ALIGN="BOTTOM" BORDER="0"
+ SRC="img83.png"
+ ALT="\includegraphics[width=5in]{figures/strfa_2.ps}"></DIV></TD></TR>
+</TABLE>
+</DIV>
+
+<UL>
+<LI><B>STRF Only</B>: This option is for displaying only the STRF. The main plot
+is the estimated STRF. The right panel on the window shows the tolerance value
+(see the Parameters section for details) used for this STRF. <IMG
+ WIDTH="54" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="img21.png"
+ ALT="\fbox{Prev}"> and <IMG
+ WIDTH="55" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="img20.png"
+ ALT="\fbox{Next}"> buttons display the STRF calculated using different 
+tolerance values. Figure&nbsp;<A HREF="node29.html#strfa">3.12</A> is an example of the output of <B>STRF Only</B> in the
+<B>Display STRF</B> window.
+ 
+</LI>
+<LI><B>STRF projection on two axes</B>:  
+This option helps to obtain traditional response parameters from the STRF, e.g.
+best frequency, tuning bandwidth, and the neurons excitatory latency and
+inhibitory latency. Figure&nbsp;<A HREF="node29.html#strfa_2">3.13</A> is an example of this option.
+The top left figure is the plot of the 
+estimated STRF. The top right figure (called <B>Spectral Profile</B> )
+is a vertical slice of the STRF that crosses its peak excitatory response.  
+The bottom left figure, called <B>Temporal Profile</B>,
+is a horizontal slice of the STRF that crosses the same
+
+ peaks excitatory response.
+
+</LI>
+<LI><B>STRF and Spike-Triggered Average (STA)</B>:
+This option helps to compare the estimated STRF to the spike
+triggered average (STA). <IMG
+ WIDTH="54" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="img21.png"
+ ALT="\fbox{Prev}"> and <IMG
+ WIDTH="55" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="img20.png"
+ ALT="\fbox{Next}"> buttons help go to different
+STRF tolerance values.
+Figure&nbsp;<A HREF="node29.html#strfa_3">3.14</A> is an example of this option.
+
+</LI>
+<LI><B>STRF and STA (for 2-D display)</B>:
+This option is for 2-D only. Figure&nbsp;<A HREF="node29.html#displaystrfv">3.15</A> gives an example of this option.
+&gt;From this figure, we can see the STRF is displayed as a time-varying 
+sequence of the 2-D frames.  
+In order to see how the STRF is different from the STA, this option draws them 
+together.
+
+<DIV ALIGN="CENTER"><A NAME="strfa_3"></A><A NAME="331"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 3.14:</STRONG>
+Display STRF: STRF and STA</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="575" HEIGHT="556" ALIGN="BOTTOM" BORDER="0"
+ SRC="img84.png"
+ ALT="\includegraphics[width=5in]{figures/strfa_3.ps}"></DIV></TD></TR>
+</TABLE>
+</DIV>
+
+<DIV ALIGN="CENTER"><A NAME="displaystrfv"></A><A NAME="336"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 3.15:</STRONG>
+Display STRF: STRF and STA (for 2-D only)</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="575" HEIGHT="394" ALIGN="BOTTOM" BORDER="0"
+ SRC="img85.png"
+ ALT="\includegraphics[width=5in]{figures/displaystrfv.ps}"></DIV></TD></TR>
+</TABLE>
+</DIV>
+</LI>
+</UL><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html507"
+  HREF="node30.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html503"
+  HREF="node24.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html497"
+  HREF="node28.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html505"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html508"
+  HREF="node30.html">Reference for STRFPAK's Modulation</A>
+<B> Up:</B> <A NAME="tex2html504"
+  HREF="node24.html">Estimating the STRF</A>
+<B> Previous:</B> <A NAME="tex2html498"
+  HREF="node28.html">Display StimStat</A>
+ &nbsp <B>  <A NAME="tex2html506"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+
+2004-08-09
+</ADDRESS>
+</BODY>
+</HTML>

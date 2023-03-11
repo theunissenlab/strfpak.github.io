@@ -1,0 +1,142 @@
+<HTML><HEAD>
+<title>Documents of The STRF Software</title>
+</HEAD>
+
+<BODY Background="picture/background1">
+
+<menu>
+        <menu>
+                <menu>
+<a href="index.html">Home</a> |
+<a href="overview.html">Overview</a> |
+<a href="guidemo.html">Software Demo and Tutorial</a> |
+<a href="download.html">Software Download</a> |
+<a href="strffaq.html">FAQ</a> |
+<a href="contact.html">Contact</a> |
+<a href="link.html">Relevant Links</a> |
+<a href="staffonly/staff.html">Team-members Only</a>
+<p>
+<hr>
+
+<h1>Documents</h1>
+
+<p>
+
+The STRFs software can be used in the visual system and auditory system.
+<hr>
+<h1>Online Reference</h1>
+<TABLE  BORDER=0 CELLPADDING=1 CELLSPACING=10 width="360">
+<TR>
+<TD valign=top >
+<A HREF="docs.html#user_guide">
+<img src = "picture/blueball.gif" alt="*" border=0 width="21" height="21">
+User Guide</A><br>
+<a href="docs.html#program_guide">
+<img src="picture/blueball.gif" alt="*" border=0 width="21" height="21">
+Programming Guide</a><br>
+</TD>
+</TABLE>
+<h2> <a name="user_guide"><b>User Guide(coming)</a></b></h2>
+Under Construction.
+<h2> <a name="program_guide"><b>Programming Guide</a></b></h2>
+<p><b>Purpose:</b><p>
+Your code should be easy to read and interpret.
+This is especially important at
+a later time if you or someone else updates your code. The following guides will 
+help you develop a programming style that will enhance the readability of your
+code: <br>
+<p><b>Comment:</b><p>
+It is considered good programming practice to include
+comment lines. Comment lines, indicated by a % in Matlab or /* xxx */ in C, add
+information, such as the purpose of the program, definition of variables, and
+the purpose of statements within the program. A comment indicating the units of
+measure that correspond to numeric values will also help in the interpretation
+of results. Comments are printed in the listing of a program, but are otherwise
+ignored; they do not affect program execution.
+
+It is recommended that each code be commented at the beginning to tell
+<ul>
+ <li>What it does; </li>
+ <li>How it is being done;</li>
+ <li>What the parameters mean;</li>
+ <li>Who wrote the code and when;</li>
+ <li>Revision History;</li>
+</ul>
+
+
+&nbsp;<p><b>Blank lines:</b><p>
+Within the code, use blank lines to separate the different steps of the
+algorithm.
+
+<p><b>Modularization:</b>
+
+<p>A fundamental approach to solving large, complex
+problems is to break the problem down into smaller problems. Then, solutions can 
+be found for these smaller problems and organized in such a manner as to address 
+the original problem. In a similar way, problems that require long, complex
+Matlab code can be broken down into function units. In addition to the main
+program unit, Matlab or C programs can call Matlab function or subprogram
+written in other languages. Modularization allow the programmer to organize
+programs in a logical, hierarchical fashion. There are several advantages to
+modularize your program:
+<ul>
+  <li>they help keep the code simple, and, thus, more readable;
+  </li>
+  <li>they allow the programmer to use the same code as many times as needed
+  throughout the program;
+  </li>
+  <li>they allow the programmer to define needed functions; and,
+  </li>
+  <li>they can be used in other programs.
+  </li>
+  </ul>
+
+<p><br>
+Example <br>
+Assume that this is the pseudo-code for a desired sequence of operations: <br>
+<br>
+read the data from a file; <br>
+perform calculations based on the data read; <br>
+post-process the data; and, <br>
+save the data in a new file. <br>
+<br>
+<br>
+The program could be written with five program units: a main program and four
+subprograms: GETFILE, CALCULATION, PPROCESS and NEWFILE. This will help to add
+or modify some modules later and improve the code's maintainability.<br>
+&nbsp;
+
+<br>
+<p><b>Documentation:</b><p>
+
+It is strongly recommended that every application or run procedure have a
+README file which documents the following things:
+
+<ul>
+  <li>General description of the application.</li>
+  <li>Description of what the code does</li>
+  <li>Who wrote the code and when.</li>
+  <li>Algorithms used.</li>
+  <li>Library and program dependencies.</li>
+  <li>Design restriction.</li>
+  <li>Inputs.</li>
+  <li>Output.</li>
+  <li>Known bugs.</li>
+  <li>Revision History.</li>
+ </ul>
+
+<hr>
+<i>
+We welcome questions and comments on this web page.  Please send email to <a href="fet@socrates.berkeley.edu">fet@socrates.berkeley.edu</a><br>
+Last Modified: Thursday, 19-Aug-2002<p>
+</i>
+
+                </menu>
+        </menu>
+</menu>
+
+<a href = "index.html"><img src="picture/home.gif" border=1 alt="home">Back to the STRF Software home page</a> <br>
+
+
+</BODY>
+</HTML>

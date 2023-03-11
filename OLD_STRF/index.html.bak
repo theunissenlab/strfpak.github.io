@@ -1,0 +1,93 @@
+<HTML>
+<HEAD><TITLE>UCB STRF Software</TITLE>
+<META name="description" content="UCB Psych. Dept.">
+<META name="keywords" content="STRF Software, Computational Neuroscience">
+<META name="distribution" content="global">
+</HEAD>
+  
+<BODY background="picture/background1">
+
+<CENTER>
+<P><a href="http://www.berkeley.edu">
+   <IMG SRC="picture/ucb.gif" HEIGHT=100 WIDTH=432 alt="UCB Logo" border=0></a>
+<a href="http://www.nimh.nih.gov/neuroinformatics/announce.cfm">
+<img border="0" src="picture/translogo2.gif" alt="NIH" width="139" height="101"></a></P></CENTER>
+
+<center>
+<h2><font size="6">STRF Estimation Software</font></h2>
+</center>
+
+
+<CENTER><TABLE BORDER=1 CELLSPACING=10 CELLPADDING=0 >
+<TR>
+<TD><IMG SRC="picture/jlg1.jpg" ALT="Gallant Lab" HEIGHT=150 WIDTH=150 ALIGN=CENTER>
+</TD>
+
+<TD><IMG SRC="picture/jlg22.jpg" ALT="Gallant Lab" HEIGHT=150 WIDTH=150 ALIGN=CENTER>
+</TD>
+
+<TD><IMG SRC="picture/fet1.jpg" ALT="Theunissen Lab" HEIGHT=150 WIDTH=150 ALIGN=CENTER>
+</TD>
+
+<TD><IMG SRC="picture/fet2.jpg" ALT="Theunissen Lab" HEIGHT=150 WIDTH=150 ALIGN=CENTER>
+</TD>
+
+</TR>
+</TABLE></CENTER>
+
+<P>
+
+<center>
+<TABLE  BORDER=1 CELLPADDING=15 CELLSPACING=1>
+
+  <TR valign=top>
+
+    <TD>
+     STURFPAK is a Matlab toolbox that can be used to estimate the stimulus-response transfer function of sensory neurons. The estimation techiniques are general. Linear and non-linear extensions of Spatial-temporal receptive fields (STRFs) of sensory neurons can be obtained from arbitary stimulus
+    ensembles including natural stimuli.
+    </TD>
+
+  </TR>
+
+</TABLE>
+</center>
+
+<center>
+<TABLE  BORDER=0 CELLPADDING=1 CELLSPACING=10>
+<TR>
+<TD valign=top width="244">
+<A HREF="overview.html">
+<img src = "picture/blueball.gif" alt="*" border=0 width="21" height="21">Overview</A><br>
+<a href="docs.html">
+<img src="picture/blueball.gif" alt="*" border=0 width="21" height="21">Documentation</a><br>
+<a href="src.html">
+<img src="picture/blueball.gif" alt="*" border=0 width="21" height="21">Source Code</a><br>
+</TD>
+
+<TD valign=top>
+<A HREF="guidemo.html">
+<img src = "picture/blueball.gif" alt="*" border=0 width="21" height="21">Software Demo</A><br>
+<a href="whatnew.html">
+<img src="picture/blueball.gif" alt="*" border=0 width="21" height="21">What's New?</a><br>
+<A href="staff.html">
+<img src ="picture/blueball.gif" alt="*" border=0 width="21" height="21">Staff</a><br>
+</TD>
+
+</TR>
+</TABLE>
+</center>
+
+<hr>
+<i>
+This web site and its content - @ UCB Gallant Lab and Theunissen Lab.<br>
+Questions and comments regarding this web site and software release can be sent to 
+<a href="mailto:fet@socrates.berkeley.edu">fet@socrates.berkeley.edu</a>.
+</i><br>
+<i>
+Last Modified: Monday, Aug-26-2002</p>
+<p>
+</i>
+
+</center>
+
+</BODY></HTML>

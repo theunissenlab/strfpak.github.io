@@ -1,0 +1,76 @@
+<HTML><HEAD>
+<title>Overview of The STRF Software</title>
+</HEAD>
+
+<BODY Background="picture/background1">
+
+<menu>
+        <menu>
+                <menu>
+<a href="index.html">Home</a> |
+<a href="overview.html">Overview</a> |
+<a href="guidemo.html">Software Demo</a> |
+<a href="download.html">Software Download</a> |
+<a href="strffaq.html">FAQ</a> |
+<a href="contact.html">Contact</a> |
+<a href="link.html">Relevant Links</a> |
+<a href="staffonly/staff.html">Staff</a>
+<p>
+<hr>
+
+<h1>What are STRFs?</h1>
+
+There is increasing evidence that sensory systems have evolved to optimally
+process behaviorally relevant natural stimuli. The spatiotemporal receptive
+field (STRF) describes the linear
+transformation between a time varying spatial stimulus and the neural
+response.<p>
+ 
+STRFs were first used to describe the properties of neurons in the auditory
+system but are now commonly used in other sensory modalities
+(Theunissen et al, 2001).<p>
+
+<hr>
+<h1>What Do We Do?</h1>
+
+The goal of the project is to develop a general methodology to estimate
+the stimulus response transfer function of sensory neurons. The estimation
+techniques are based on the well-known reverse correlation methods but
+with two significant extensions. First we are developing methods that can
+be used for any complex stimuli including natural stimuli. Second, we are
+developing a variety of complementary non-linear estimation techniques.
+These data analysis tools will be implemented in a user-friendly software
+package with extensive help and examples.
+
+<h2>Facilities and Hardware</h2>
+
+<h2>Software Services</h2>
+
+<p>
+
+<hr>
+
+<h1>Reference</h1>
+<li> <b>Estimating sptio-temporal receptive fields of auditory and visual
+neurons from their responses to natural stimuli</b>, Theunissen et al <i>
+Network: Computation in Neural Systems, 12 289-316, 2001. </i>
+<p>
+<li><a href="staffonly/docs.html">Online Programming Reference.</a>
+<p>
+<hr>
+<i>
+We welcome questions and comments on this web page.  
+Please send email to <a href="mailto=fet@socrates.berkeley.edu">
+fet@socrates.berkeley.edu</a><br>
+Last Modified: Thursday, 05-Aug-2002<p>
+</i>
+
+                </menu>
+        </menu>
+</menu>
+
+<a href = "index.html"><img src="picture/home.gif" border=1 alt="home">Back to the STRF Software home page</a> <br>
+
+
+</BODY>
+</HTML>

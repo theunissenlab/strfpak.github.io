@@ -1,0 +1,46 @@
+
+1. STRF calculation
+1. DeBoer, E. & Kuyper, P. (1968), "Triggered Correlation," IEEE Transactions on Biomedical Engineering 15, 159-179.
+This is the first reverse correlation method paper (rev-cor).  DeBoer showed that the spike-triggered average is an estimator of the cross-correlation between the stimulus and the response.  For white-noise a scaled version of the spike-triggered average is the linear filter between the stimulus and the response.  At this point there is no spatial dimension. 
+2. Aertsen, A. M. & Johannesma, P. I. (1981), "The spectro-temporal receptive field. A functional characteristic of auditory neurons," Biol Cybern 42, 133-43.
+The first paper describing the STRF for auditory neurons.  Aertsen, Eggermont and Young all used the STRF in the auditory periphery in the 1980’s.  They concluded that it was not a particularly useful technique because neurons responded poorly to white-noise or because the STRF estimated from responses to white-noise gave poor predictions for responses to natural or complex stimuli.  This was before dynamic ripples and our techniques.
+3. Kay Steven. (1993). Fundamental of Statistical Signal Processing. Volume 1: Estimation Theory. Prentice Hall Signal Processing Series.
+ Graduate level textbook on estimation techniques for time series.  An excellent book for background material for students involved in development of STRF estimation techniques.
+4. Ringach, D. L., Sapiro, G. & Shapley, R. (1997), "A subspace reverse-correlation technique for the study of visual neurons," Vision Res 37, 2455-64.
+A visual STRF paper that shows that STRFs can be estimated with a restricted set of stimuli but that this imposes some restrictions on the STRF that one can obtain.
+5. Klein, D. J., Depireux , D. A., Simon, J. Z. & Shamma, S. A. (2000), "Robust spectro-temporal reverse correlation for the auditory system: Optimizing stimulus design," J. Comp. Neurosci. 9, 85-111.
+The STRF calculation using dynamic ripples. This paper also has a very good description of time-frequency tradeoffs for STRFs.
+6. Theunissen, F. E., David, S. V., Singh, N. C., Hsu, A., Vinje, W. & Gallant, J. L. (2001), "Estimating spatio-temporal receptive fields of auditory and visual neurons from their responses to natural stimuli," Network: Comp. Neural Syst. 12, 1-28.
+The method at the core of STRFPAK!
+
+7. B Willmore and D Smyth (In press). Methods for first-order kernel estimation: simple-cell receptive fields from responses to natural scenes.
+Ben is a post-doc in Jack’s lab. This paper is now in press. You can get a pdf by asking Ben. 
+8.  Maneesh Sahani and Jennifer Linden (NIPS 2002): Evidence optimization techniques for estimating stimulus-response functions.  
+This is a NIPS proceeding paper that explains the use of Bayesian Techniques for auditory STRF estimation.  Maneesh and Jen are post-docs at UCSF.  The paper is available on line but you have to download the entire NIPS text for 2002. It would be easier to contact Maneesh to get a copy.
+
+2. STRF validation.
+There is very little published on this topic.
+Here are two papers in pre-print format:
+1. Maneesh Sahani and Jennifer Linden: How linear are auditory cortical responses? (NIPS  2002)
+This is a NIPS proceeding paper that describes how one can use a signal to noise power estimation to validate STRF responses.  The paper is available on line but you have to download the entire NIPS text for 2002. It would be easier to contact Maneesh to get a copy.
+
+2. Hsu Anne et al. (To be submitted) Quantifying variability in neural responses and its application for the validation of model predictions
+This paper will be submitted to Network soon.  It describes a method that we use to validate the STRFs.  It is similar mathematically to the method of Maneesh.  We both developed similar ideas around the same time but using a different parameter: we use coherence and correlation coefficient and Maneesh uses signal to noise ratio.  The two are directly  related mathematically.
+
+3. STRF review papers
+1. Ghazanfar AA, Nicolelis MA.. Feature article: the structure and function of dynamic cortical and thalamic receptive fields. Cereb Cortex. 2001 Mar;11(3):183-93. Review.
+
+4. STRF in Audition (Selected).
+1. Escabi MA, Schreiner CE.. Nonlinear spectr-temporal sound analysis by neurons in the auditory midbrain. J Neurosci. 2002 May 15;22(10):4114-31.
+2. Miller LM, Escabi MA, Read HL, Schreiner CE. Spectrotemporal receptive fields in the lemniscal auditory thalamus and cortex.
+J Neurophysiol. 2002 Jan;87(1):516-27.
+3.  Sen K, Theunissen FE, Doupe AJ. Feature analysis of natural sounds in the songbird auditory forebrain. J Neurophysiol. 2001 Sep;86(3):1445-58.
+4. Depireux DA, Simon JZ, Klein DJ, Shamma SA. Spectro-temporal response field characterization with dynamic ripples in ferret primary auditory cortex. J Neurophysiol. 2001 Mar;85(3):1220-34.
+5.  Theunissen FE, Sen K, Doupe AJ .Spectral-temporal receptive fields of nonlinear auditory neurons obtained using natural sounds.
+J Neurosci. 2000 Mar 15;20(6):2315-31.
+6. Kim PJ, Young ED. Comparative analysis of spectro-temporal receptive fields, reverse correlation functions, and frequency tuning curves of auditory-nerve fibers. J Acoust Soc Am. 1994 Jan;95(1):410-22.
+7. Eggermont JJ, Aertsen AM, Johannesma PI. Prediction of the responses of auditory neurons in the midbrain of the grass frog based on the spectro-temporal receptive field. Hear Res. 1983 May;10(2):191-202.
+
+5. STRF in Vision
+
+6. STRF in other Sensory Modalities.

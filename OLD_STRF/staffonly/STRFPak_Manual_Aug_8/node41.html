@@ -1,0 +1,136 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with jLaTeX2HTML 2002 (1.62) JA patch-1.4
+patched version by:  Kenshi Muto, Debian Project.
+LaTeX2HTML 2002 (1.62),
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Batch-mode/Nongraphical processing option</TITLE>
+<META NAME="description" CONTENT="Batch-mode/Nongraphical processing option">
+<META NAME="keywords" CONTENT="STRFPAK_Manual_Aug_8">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="jLaTeX2HTML v2002 JA patch-1.4">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="STRFPAK_Manual_Aug_8.css">
+
+<LINK REL="next" HREF="node42.html">
+<LINK REL="previous" HREF="node11.html">
+<LINK REL="up" HREF="STRFPAK_Manual_Aug_8.html">
+<LINK REL="next" HREF="node42.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html650"
+  HREF="node42.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html646"
+  HREF="STRFPAK_Manual_Aug_8.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html640"
+  HREF="node40.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html648"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html651"
+  HREF="node42.html">Summary and Things to</A>
+<B> Up:</B> <A NAME="tex2html647"
+  HREF="STRFPAK_Manual_Aug_8.html">STRFPAK: A Spatio-temporal Receptive</A>
+<B> Previous:</B> <A NAME="tex2html641"
+  HREF="node40.html">Load Prev Result</A>
+ &nbsp <B>  <A NAME="tex2html649"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00600000000000000000">
+Batch-mode/Nongraphical processing option</A>
+</H1>
+
+For a large sets of data, you may want to run STRFPAK-2.0 in a batch-mode.  
+The easiest way to do this is as follows:  
+First, run one cell from your data set with the graphical version of STRFPAK.  As well as the result files like <B>strfResult.mat</B> containing the strfs and <B>info_r_result.mat</B> containing their goodness of fit, a file called <B>STRFPAK_script.m</B> will be saved in the output 
+directory, containing a script of all the actions performed by the graphical version of 
+STRFPAK.  Edit it (Note: you may need add preprocessing routines) and embed it into a loop 
+as you would any other Matlab script file for a
+fast batch mode.  Remember that the output directory for each STRFPAK run should be unique 
+to avoid having STRFPAK overwrite previous results. 
+
+Also provided are template batch-mode codes, <!-- MATH
+ $STRFPAK\_batch\_template.m$
+ -->
+<IMG
+ WIDTH="257" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img127.png"
+ ALT="$STRFPAK\_batch\_template.m$"> and
+<!-- MATH
+ $STRFPAK\_core.m$
+ -->
+<IMG
+ WIDTH="169" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img128.png"
+ ALT="$STRFPAK\_core.m$">. All the required parameters need specified in <!-- MATH
+ $STRFPAK\_batch\_template.m$
+ -->
+<IMG
+ WIDTH="257" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img127.png"
+ ALT="$STRFPAK\_batch\_template.m$">.
+If you have different data layout from demo data, you also need modify <!-- MATH
+ $STRFPAK\_core.m$
+ -->
+<IMG
+ WIDTH="169" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img128.png"
+ ALT="$STRFPAK\_core.m$">.
+Feel free to email Junli (junli@socrates.berkeley.edu) if you run into any problems.
+
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html650"
+  HREF="node42.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html646"
+  HREF="STRFPAK_Manual_Aug_8.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html640"
+  HREF="node40.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html648"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html651"
+  HREF="node42.html">Summary and Things to</A>
+<B> Up:</B> <A NAME="tex2html647"
+  HREF="STRFPAK_Manual_Aug_8.html">STRFPAK: A Spatio-temporal Receptive</A>
+<B> Previous:</B> <A NAME="tex2html641"
+  HREF="node40.html">Load Prev Result</A>
+ &nbsp <B>  <A NAME="tex2html649"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+
+2004-08-09
+</ADDRESS>
+</BODY>
+</HTML>

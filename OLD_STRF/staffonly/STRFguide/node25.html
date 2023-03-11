@@ -1,0 +1,204 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with jLaTeX2HTML 2002 (1.62) JA patch-1.4
+patched version by:  Kenshi Muto, Debian Project.
+LaTeX2HTML 2002 (1.62),
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Validate</TITLE>
+<META NAME="description" CONTENT="Validate">
+<META NAME="keywords" CONTENT="STRFguide">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="jLaTeX2HTML v2002 JA patch-1.4">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="STRFguide.css">
+
+<LINK REL="next" HREF="node26.html">
+<LINK REL="previous" HREF="node24.html">
+<LINK REL="up" HREF="node14.html">
+<LINK REL="next" HREF="node26.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html407"
+  HREF="node26.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html403"
+  HREF="node14.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html397"
+  HREF="node24.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html405"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html408"
+  HREF="node26.html">Display Information Value and</A>
+<B> Up:</B> <A NAME="tex2html404"
+  HREF="node14.html">Application of the STRFPAK</A>
+<B> Previous:</B> <A NAME="tex2html398"
+  HREF="node24.html">Display Predicted PSTHs Window</A>
+ &nbsp <B>  <A NAME="tex2html406"
+  HREF="node2.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION006311000000000000000">
+Validate</A>
+</H2>
+The <B>Display Predicted PSTH</B> window gives us visual comparison
+of the predicted response with the actual response. 
+To quantify the goodness of fit of the estimated STRF, STRFPAK implements
+two measures: coherence and correlation
+coefficient. The coherence is a function of frequency and is given by:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\gamma^2(\omega) = \frac{<R(\omega) \hat{R}(\omega)^{*}><R(\omega)^{*} \hat{R}(\omega)>}
+{<R(\omega) R(\omega)^{*}><\hat{R}(\omega) \hat{R}(\omega)^{*}>}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="332" HEIGHT="58" BORDER="0"
+ SRC="img66.png"
+ ALT="\begin{displaymath}
+\gamma^2(\omega) = \frac{&lt;R(\omega) \hat{R}(\omega)^{*}&gt;&lt;R(\...
+...(\omega) R(\omega)^{*}&gt;&lt;\hat{R}(\omega) \hat{R}(\omega)^{*}&gt;}
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+Here <IMG
+ WIDTH="46" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img67.png"
+ ALT="$R(\omega)$"> and <!-- MATH
+ $\hat{R}(\omega)$
+ -->
+<IMG
+ WIDTH="46" HEIGHT="44" ALIGN="MIDDLE" BORDER="0"
+ SRC="img68.png"
+ ALT="$\hat{R}(\omega)$"> are actual and predicted neuron responses
+at each temporal frequency, <IMG
+ WIDTH="17" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img69.png"
+ ALT="$\omega$">. An overall goodness-of-fit estimate, <IMG
+ WIDTH="14" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img70.png"
+ ALT="$I$">,
+is obtained by integrating the coherence function. The lower bound of <IMG
+ WIDTH="14" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img70.png"
+ ALT="$I$">
+is obtained if the noise follows a Gaussian distribution and the upper bound 
+is obtained if the neuron response is a Gaussian. For detailed derivation, 
+please refer to Hsu's
+information theory paper(to be submitted).
+
+<P>
+Correlation coefficient(<IMG
+ WIDTH="21" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img71.png"
+ ALT="$cc$">) between <IMG
+ WIDTH="35" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img72.png"
+ ALT="$r(t)$"> and <IMG
+ WIDTH="35" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img73.png"
+ ALT="$\hat{r}(t)$"> is 
+calculated based on:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+cc = \frac{<(r(t) - \bar{r(t)}) (\hat{r}(t) - \bar{\hat{r}(t)})>}
+    {\sqrt{<(r(t) - \bar{r(t)})^2><(\hat{r}(t) - \bar{\hat{r}(t)})^2>}}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="351" HEIGHT="63" BORDER="0"
+ SRC="img74.png"
+ ALT="\begin{displaymath}
+cc = \frac{&lt;(r(t) - \bar{r(t)}) (\hat{r}(t) - \bar{\hat{r}(t...
+...t{&lt;(r(t) - \bar{r(t)})^2&gt;&lt;(\hat{r}(t) - \bar{\hat{r}(t)})^2&gt;}}
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+Here <IMG
+ WIDTH="35" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img72.png"
+ ALT="$r(t)$"> and <IMG
+ WIDTH="35" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img73.png"
+ ALT="$\hat{r}(t)$"> are actual and predicted neuron
+responses. Since <IMG
+ WIDTH="21" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img71.png"
+ ALT="$cc$"> depends on the time bin that is used to
+obtain <IMG
+ WIDTH="35" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img72.png"
+ ALT="$r(t)$"> from the PSTH, STRFPAK only
+compares <IMG
+ WIDTH="21" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img71.png"
+ ALT="$cc$"> between similar time windows&nbsp;<A HREF="#fet1"><IMG  ALIGN="BOTTOM" BORDER="1" ALT="[*]"
+ SRC="file:/usr/share/latex2html/icons/crossref.png"></A>.
+
+<P>
+When all calculation are done, small ``Done Prediction''
+window appears. 
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html407"
+  HREF="node26.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html403"
+  HREF="node14.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html397"
+  HREF="node24.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html405"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html408"
+  HREF="node26.html">Display Information Value and</A>
+<B> Up:</B> <A NAME="tex2html404"
+  HREF="node14.html">Application of the STRFPAK</A>
+<B> Previous:</B> <A NAME="tex2html398"
+  HREF="node24.html">Display Predicted PSTHs Window</A>
+ &nbsp <B>  <A NAME="tex2html406"
+  HREF="node2.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+
+2003-03-19
+</ADDRESS>
+</BODY>
+</HTML>

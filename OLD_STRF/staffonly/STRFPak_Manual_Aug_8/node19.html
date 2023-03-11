@@ -1,0 +1,313 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with jLaTeX2HTML 2002 (1.62) JA patch-1.4
+patched version by:  Kenshi Muto, Debian Project.
+LaTeX2HTML 2002 (1.62),
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Short Time Fourier Transform</TITLE>
+<META NAME="description" CONTENT="Short Time Fourier Transform">
+<META NAME="keywords" CONTENT="STRFPAK_Manual_Aug_8">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="jLaTeX2HTML v2002 JA patch-1.4">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="STRFPAK_Manual_Aug_8.css">
+
+<LINK REL="next" HREF="node20.html">
+<LINK REL="previous" HREF="node18.html">
+<LINK REL="up" HREF="node16.html">
+<LINK REL="next" HREF="node20.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html383"
+  HREF="node20.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html379"
+  HREF="node16.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html373"
+  HREF="node18.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html381"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html384"
+  HREF="node20.html">Wavelet Transforms</A>
+<B> Up:</B> <A NAME="tex2html380"
+  HREF="node16.html">Get Input</A>
+<B> Previous:</B> <A NAME="tex2html374"
+  HREF="node18.html">The Preprocessing Menu</A>
+ &nbsp <B>  <A NAME="tex2html382"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00553000000000000000">
+Short Time Fourier Transform</A>
+</H2>
+
+<DIV ALIGN="CENTER"><A NAME="loadfile"></A><A NAME="90"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 3.3:</STRONG>
+The Load file window in STRFPAK</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="575" HEIGHT="411" ALIGN="BOTTOM" BORDER="0"
+ SRC="img11.png"
+ ALT="\includegraphics[width=5in]{figures/loadfile.ps}"></DIV></TD></TR>
+</TABLE>
+</DIV>
+
+<DIV ALIGN="CENTER"><A NAME="spectrogramfig"></A><A NAME="95"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 3.4:</STRONG>
+The Songwave <IMG
+ WIDTH="24" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1.png"
+ ALT="$\rightarrow $"> Spectrogram window in STRFPAK</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="575" HEIGHT="464" ALIGN="BOTTOM" BORDER="0"
+ SRC="img12.png"
+ ALT="\includegraphics[width=5in]{figures/spectrogramfig.ps}"></DIV></TD></TR>
+</TABLE>
+</DIV>
+In auditory system STRF estimation, it is common to represent sound in a time-frequency representation rather than a raw waveform.  The short time Fourier transform (STFT) is a simple example of such a representation, and is included in STRFPAK. 
+The STFT representation of a sound can be thought of as the amplitude
+envelope of the different frequency components of a sound.
+After clicking the <!-- MATH
+ $\fbox{Short Time Fourier Transform}$
+ -->
+<IMG
+ WIDTH="264" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="img8.png"
+ ALT="\fbox{Short Time Fourier Transform}"> button, 
+the <B>Songwave <IMG
+ WIDTH="24" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1.png"
+ ALT="$\rightarrow $"> spectrogram</B>
+window shown in Figure&nbsp;<A HREF="node19.html#spectrogramfig">3.4</A> 
+appears. The right panel of that window displays options for and properties of the STFT. The left panel is used for displaying your output 
+when you click the <!-- MATH
+ $\fbox{Display}$
+ -->
+<IMG
+ WIDTH="77" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="img13.png"
+ ALT="\fbox{Display}"> button.
+
+<UL>
+<LI><!-- MATH
+ $\fbox{Load files}$
+ -->
+<IMG
+ WIDTH="94" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="img14.png"
+ ALT="\fbox{Load files}">: It is used to load raw data, e.g. sound wave files
+and their associated response data files into the STRFPAK structure.
+The <B>Load file window</B> shown in Figure&nbsp;<A HREF="node19.html#loadfile">3.3</A>
+ pops-up after <!-- MATH
+ $\fbox{Load files}$
+ -->
+<IMG
+ WIDTH="94" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="img14.png"
+ ALT="\fbox{Load files}"> is clicked.
+
+<UL>
+<LI><B>Load stimulus files</B>: This panel is used for showing all
+the files under the directory which is shown in the dark green area.
+It may contain the stimulus and response files under that directory. 
+However, you need to select only the stimulus files from this panel. 
+To select multiple stimulus data, hold down the <B>CTRL</B> key while
+clicking your selection.
+
+</LI>
+<LI><B>Load response files</B>: This panel is used for showing all
+the files under the directory which is shown in the dark green area.
+It may contain the stimulus and response files under that directory.
+However, you need to select only the response files from this panel.
+To select multiple response data, hold down the <B>CTRL</B> key while
+clicking selection.
+
+</LI>
+<LI><B>Show selection</B>: This panel shows what you just selected.
+It helps you double check your selection. Note the first file in the
+data pair needs to be the stimulus and the second needs to be its associated response. 
+<B>The order is very important</B>.
+
+</LI>
+<LI><!-- MATH
+ $\fbox{Update stimpath}$
+ -->
+<IMG
+ WIDTH="155" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="img15.png"
+ ALT="\fbox{Update stimpath}">: This button helps you to change the
+directory of the <B>Load stimulus files</B> panel.
+
+</LI>
+<LI><!-- MATH
+ $\fbox{Update resppath}$
+ -->
+<IMG
+ WIDTH="153" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="img16.png"
+ ALT="\fbox{Update resppath}">: This button helps you to change the
+directory of the <B>Load response files</B> panel.
+
+</LI>
+<LI><IMG
+ WIDTH="63" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="img17.png"
+ ALT="\fbox{Select}">: After you highlight what you want from
+<B>Load stimulus files</B> and <B>Load response files</B>, you need
+click this button to load them into the toolbox and show them
+in the <B>Show selection</B> panel.
+
+</LI>
+<LI><IMG
+ WIDTH="80" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="img18.png"
+ ALT="\fbox{Remove}">: You can remove any one or more data sets by
+clicking <IMG
+ WIDTH="80" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="img18.png"
+ ALT="\fbox{Remove}"> button from the <B>Show selection</B> area.
+</LI>
+</UL>
+
+</LI>
+<LI><B>Parameters</B>: All the parameters needed for the STFT on
+the sound wave stimulus files are specified here. For detailed
+description about this method, please refer to our preprocessing
+paper&nbsp;[].
+
+<UL>
+<LI><B>filter_width (Hz)</B>: the width of the filter in Hz. It defines window
+                 length of filter (here we use a Gaussian filter).
+</LI>
+<LI><B>filter_width (ms)</B>: the width of the filter in ms, inversely proportional to the filter width in Hz.
+
+</LI>
+<LI><B>amp_samprate (Hz)</B>: the sampling rate that we want for the amplitude
+                 envelope. By default, it is 10 times that of <B>filter_width</B>, but you can change it.
+</LI>
+<LI><B>resp_samprate (Hz)</B>: the sampling rate of the spike data. This must be set to the sampling frequency in Hz when you collect your data.  For example, with 1 ms bins, the resp_samprate would be 1000 Hz.
+
+</LI>
+<LI><B>psth_smoothconst</B>: the window length for smoothing your psth.  For validation purposes, it is common to smooth the PSTH before calculating a correlation coefficient.  psth_smoothconst is the width in ms of this smoothing window.
+</LI>
+<LI><B>stim_samprate (Hz)</B>: the sampling rate of stimuli in Hz. e.g. the demo
+                 songwave file has a sampling frequency of 32000 Hz, and many music files have a sampling rate of 44100 Hz. It is automatically
+                 calculated for you based on your sound wave file.
+</LI>
+<LI><B>nbands</B>: the numbers of frequency bands covered for the calculation.
+                   You don't need to specify since the code will it figure out based
+                   on your <B>filter_width (Hz)</B>.
+</LI>
+<LI><B>Scale option</B>: the choice of whether linear scale or logarithmic scale
+                  is used for the amplitude envelope. For many sensory systems a neurons response correlates better to the log of a stimulus intensity better than to the stimulus intensity itself.
+</LI>
+</UL>
+
+</LI>
+<LI><!-- MATH
+ $\fbox{Compute and Save}$
+ -->
+<IMG
+ WIDTH="170" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="img19.png"
+ ALT="\fbox{Compute and Save}">: Computes the spectrogram of the signal and saves
+                  the result into the directory which you are asked to specify.
+             The computing status bar also shows up so that you can know the
+             progress of the computation.
+
+</LI>
+<LI><!-- MATH
+ $\fbox{Display}$
+ -->
+<IMG
+ WIDTH="77" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="img13.png"
+ ALT="\fbox{Display}">: Graphically displays the spectrogram of the stimulus and
+                the psth smoothed with <B>psth_smoothconst</B> window size.
+               If more than one data set are chosen, <IMG
+ WIDTH="55" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="img20.png"
+ ALT="\fbox{Next}"> and 
+               <IMG
+ WIDTH="54" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="img21.png"
+ ALT="\fbox{Prev}"> buttons show up so that you can click to see the 
+               next data set.
+</LI>
+<LI><IMG
+ WIDTH="61" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="img22.png"
+ ALT="\fbox{Reset}">: Resets all the parameters and the data sets chosen.
+</LI>
+<LI><IMG
+ WIDTH="53" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3.png"
+ ALT="\fbox{Help}">: Causes a help window on this window to appear.
+</LI>
+<LI><IMG
+ WIDTH="59" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="img23.png"
+ ALT="\fbox{Close}">: Closes this window and saves all the parameters and all the
+                results.
+
+</LI>
+</UL><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html383"
+  HREF="node20.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html379"
+  HREF="node16.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html373"
+  HREF="node18.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html381"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html384"
+  HREF="node20.html">Wavelet Transforms</A>
+<B> Up:</B> <A NAME="tex2html380"
+  HREF="node16.html">Get Input</A>
+<B> Previous:</B> <A NAME="tex2html374"
+  HREF="node18.html">The Preprocessing Menu</A>
+ &nbsp <B>  <A NAME="tex2html382"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+
+2004-08-09
+</ADDRESS>
+</BODY>
+</HTML>

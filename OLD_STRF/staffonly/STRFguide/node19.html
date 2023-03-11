@@ -1,0 +1,227 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with jLaTeX2HTML 2002 (1.62) JA patch-1.4
+patched version by:  Kenshi Muto, Debian Project.
+LaTeX2HTML 2002 (1.62),
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Estimate</TITLE>
+<META NAME="description" CONTENT="Estimate">
+<META NAME="keywords" CONTENT="STRFguide">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="jLaTeX2HTML v2002 JA patch-1.4">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="STRFguide.css">
+
+<LINK REL="next" HREF="node20.html">
+<LINK REL="previous" HREF="node18.html">
+<LINK REL="up" HREF="node14.html">
+<LINK REL="next" HREF="node20.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html335"
+  HREF="node20.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html331"
+  HREF="node14.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html325"
+  HREF="node18.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html333"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html336"
+  HREF="node20.html">Display Stimulus Statistics Window</A>
+<B> Up:</B> <A NAME="tex2html332"
+  HREF="node14.html">Application of the STRFPAK</A>
+<B> Previous:</B> <A NAME="tex2html326"
+  HREF="node18.html">Display Input Window</A>
+ &nbsp <B>  <A NAME="tex2html334"
+  HREF="node2.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00635000000000000000">
+Estimate</A>
+</H2>
+
+<P>
+STRFPAK implements the generalized reverse
+correlation method described in Theunissen et al 2001&nbsp;<A HREF="#fet1"><IMG  ALIGN="BOTTOM" BORDER="1" ALT="[*]"
+ SRC="file:/usr/share/latex2html/icons/crossref.png"></A> 
+to estimate the STRFs of sensory neurons from their
+responses to complex stimulus ensembles.
+Since a complete
+description of the second-order statistics of the stimulus ensemble
+is required for estimation, 
+STRFPAK first computes
+the stimulus auto-correlation matrix and the stimulus-response
+cross correlation vector.
+The auto-correlation matrix of the
+stimulus <IMG
+ WIDTH="31" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img39.png"
+ ALT="$C_{ss}$"> and the stimulus-response cross-correlation vector
+<IMG
+ WIDTH="32" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img40.png"
+ ALT="$C_{sr}$"> are described as follows&nbsp;<A HREF="#fet1"><IMG  ALIGN="BOTTOM" BORDER="1" ALT="[*]"
+ SRC="file:/usr/share/latex2html/icons/crossref.png"></A>.
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+C_{ss} =  \left( \begin{array}{ccc}
+              c_{0,0} & \cdots & c_{0, M-1} \\
+             \vdots & \ddots & \vdots \\
+             c_{M-1, 0} & \cdots & c_{M-1, M-1}
+             \end{array} \right)
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="272" HEIGHT="84" BORDER="0"
+ SRC="img41.png"
+ ALT="\begin{displaymath}C_{ss} = \left( \begin{array}{ccc}
+c_{0,0} &amp; \cdots &amp; c_{0, ...
+...s \\
+c_{M-1, 0} &amp; \cdots &amp; c_{M-1, M-1}
+\end{array} \right)
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+and
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+C_{sr} = <sr> = \left(\begin{array}{c}
+                      <s[t - 0]r[t]>\\\vdots \\
+                <s[t-NM+1]r[t]> \end{array}
+                 \right)
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="348" HEIGHT="84" BORDER="0"
+ SRC="img42.png"
+ ALT="\begin{displaymath}C_{sr} = &lt;sr&gt; = \left(\begin{array}{c}
+&lt;s[t - 0]r[t]&gt;\\ \vdots \\
+&lt;s[t-NM+1]r[t]&gt; \end{array} \right)
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+where <IMG
+ WIDTH="28" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img43.png"
+ ALT="$c_{i,j}$"> denotes the correlations between spatial dimensions
+<IMG
+ WIDTH="11" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img44.png"
+ ALT="$i$"> and <IMG
+ WIDTH="14" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img45.png"
+ ALT="$j$"> for all the relevant time delays.
+<IMG
+ WIDTH="22" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img46.png"
+ ALT="$N$"> is the length of time dimension and <IMG
+ WIDTH="25" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img47.png"
+ ALT="$M$"> is the
+number of spatial parameters.
+
+<P>
+The estimated STRF from the linear mean-square estimation
+<!-- MATH
+ $<(\hat{r} - r)^2>$
+ -->
+<IMG
+ WIDTH="108" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img48.png"
+ ALT="$&lt;(\hat{r} - r)^2&gt;$"> is given as follows:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+h = C_{ss}^{-1}C_{sr}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="93" HEIGHT="33" BORDER="0"
+ SRC="img49.png"
+ ALT="\begin{displaymath}h = C_{ss}^{-1}C_{sr}\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+where <IMG
+ WIDTH="16" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img50.png"
+ ALT="$h$"> is the estimated STRF. STRFPAK then normalizes
+the cross-covariance matrix between the stimulus and the response
+by auto-covariance matrix of the stimulus to get the
+estimated STRF. For error estimation analysis,
+the Jackknifed STRFs are also calculated if multiple data sets
+are selected. For the Jackknifed error estimation techniques,
+please refer to [<A
+ HREF="node29.html#jackknifed">4</A>].
+
+<P>
+When the calculation are done, the small ``Done Estimation''
+window appears. 
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html335"
+  HREF="node20.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html331"
+  HREF="node14.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html325"
+  HREF="node18.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html333"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html336"
+  HREF="node20.html">Display Stimulus Statistics Window</A>
+<B> Up:</B> <A NAME="tex2html332"
+  HREF="node14.html">Application of the STRFPAK</A>
+<B> Previous:</B> <A NAME="tex2html326"
+  HREF="node18.html">Display Input Window</A>
+ &nbsp <B>  <A NAME="tex2html334"
+  HREF="node2.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+
+2003-03-19
+</ADDRESS>
+</BODY>
+</HTML>

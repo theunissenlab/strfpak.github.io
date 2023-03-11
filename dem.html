@@ -1,0 +1,234 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+
+  <meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+
+  <meta name="description" content="STRFPak STRF Estimation Software">
+
+  <meta name="keywords" content="">
+
+  <meta name="author" content="J.L. Gallant, F.E. Theunissen">
+
+  <link rel="stylesheet" type="text/css" href="andreas02.css" media="screen,projection" title="andreas02 (screen)">
+
+  <link rel="stylesheet" type="text/css" href="print.css" media="print">
+
+  <title>STRFPak</title>
+</head>
+
+
+<body>
+
+<div id="toptabs">
+<p>Sites:
+<a class="activetoptab" href="index.html">STRFPak</a><span class="hide"> | </span>
+<a class="toptab" href="http://neuralprediction.berkeley.edu">Challenge</a><span class="hide"> | </span>
+</p>
+</div>
+
+
+<div id="container">
+<div id="logo">
+<!-- <h1><center><a href="index.html">TITLE</a></center></h1> -->
+</div>
+
+
+<div id="navitabs">
+<a class="navitab" href="index.html">Overview</a><span class="hide"> | </span>
+<a class="activenavitab" href="dem.html">Demo</a><span class="hide"> | </span>
+<a class="navitab" href="dow.html">Download</a><span class="hide"> | </span>
+<a class="navitab" href="faq.html">FAQ</a><span class="hide"> | </span>
+<a class="navitab" href="ref.html">References</a><span class="hide"> | </span>
+<a class="navitab" href="gal.html">Gallery</a><span class="hide"> | </span>
+<a class="navitab" href="contact.html">Contact</a><span class="hide"> | </span></div>
+
+
+<div id="desc">
+<!-- <h2>SUMMARY</h2> -->
+</div>
+
+  
+<div id="main">
+<h3>STRFPak demonstration</h3>
+
+
+<p>This tutorial is somewhat dated but it should give you a good feel
+for STRFPak. Note that STRFPak is implemented as a Matlab toolbox and
+includes an extensive GUI.</p>
+
+
+<br>
+
+<h3><b><a name="start">Starting STRFPak</a></b></h3>
+
+
+<p>To run the program at the MATLAB prompt type:</p>
+
+
+<p><b>&gt;&gt;strfpak</b></p>
+
+
+<p>The following graphics window should be displayed.</p>
+
+
+<p><img src="images/strfFirstGUI.gif" alt="simple gui" height="400" width="550"></p>
+
+
+<p>You can click the appropriate buttons to input the data files, estimate a STRF, 
+predict a response and evaluate how well the STRF predicts responses.</p>
+
+
+<br>
+
+<h3><b><a name="get_filesGUI">Get Input Files Window</a></b></h3>
+
+
+<p>Click <b>Get Files</b> and the "Get Files" window will prompt you to
+enter the data sets and stimulus sampling rate. Select data set(s) by
+clicking inside the <b>stim file list</b> and <b>response file list</b> (scroll to see the selections and click on your choice). To select multiple data sets, hold down the <b>CTRL</b> key while clicking.</p>
+
+
+<p>In the following example three data sets have been selected:
+"stim1.dat and spike1.dat", "stim2.dat and spike2.dat" and "stim3.dat
+and spike3.dat". The stimulus and response sampling rates are 1
+millisecond. The dimensionality is set to one (i.e., the stimulus is a
+sound).</p>
+
+
+<p><img src="images/getfile.gif" alt="get files" height="400" width="600"></p>
+
+
+<br>
+
+<h3><b><a name="calcparameterGUI">Set Calc. Parameter Window</a></b></h3>
+
+
+<p>The "Calc Parameter Window" will prompt you to enter the estimation parameters. <b>TWINDOW</b> is the range of lags for computing the auto/cross correlation (e.g. 300 ms). <b>Spatio_size</b> is the stimulus spatial dimension. In this example the spatial dimension is 62. <b>Tol Val</b> is the list of tolerance values for STRF estimation (e.g. 0.1, 0.05, 0.001, 0.0005).</p>
+
+
+<p><img src="images/calcpara.gif" height="350" width="400"></p>
+
+
+<br>
+
+<h3><b><a name="displayinputGUI">Display Input Window</a></b></h3>
+
+
+<p>The "Display Input Window" shows three plots: the stimulus, the
+response and the trial-averaged response (peri-stimulus time histogram,
+or PSTH).</p>
+
+
+<p><img src="images/displayinputGUI.gif" height="550" width="500"></p>
+
+
+<br>
+
+<h3><b><a name="displaystimstatGUI">Display Stimulus Statistics</a></b></h3>
+
+
+<p>Two measures of stimulus statistics can be displayed: the stimulus auto-correlation
+and stimulus-response cross-correlation.</p>
+
+
+<p><img src="images/displaystimstatGUI.gif" height="500" width="500"></p>
+
+
+<br>
+
+<h3><b><a name="displaystrfGUI">Display STRF</a></b></h3>
+
+
+<p>There are two options to display estimated STRFs: STRF only and the projection of the STRF on two axes.</p>
+
+
+<p><img src="images/displaystrfGUI.gif" height="550" width="550"></p>
+
+
+<br>
+
+<h3><b><a name="getpredfiles">Get Pred Files</a></b></h3>
+
+
+<p>Before the "Get PredFiles" window opens you are asked if you want to set <b>matchflg</b> parameter. The <b>matchflg</b>
+determines whether the original data are used for prediction, or
+whether a separate validation set should be used. In either case the
+STRF will be optimized by jacknifing to reduce over-fitting. The layout
+of the "Get PredFiles" window is the same as the "Get Files" window.</p>
+
+
+<br>
+
+<h3><b><a name="displaypredstrf">Display Pred STRF</a></b></h3>
+
+
+<p>The first plot in the "Display Pred STRF" window is the stimulus. The second plot compares the predicted and actual responses.</p>
+
+
+<p><img src="images/displaypredstrfGUI.gif" height="550" width="550"></p>
+
+
+<br>
+
+<h3><b><a name="displayinfocc">Display Info Value and Correlation Coeff</a></b></h3>
+
+
+<p>Two measures are available to quantify goodness of fit: coherence
+and correlation. The "Display Info/CC" window provides the predicted
+coherence and correlation coefficient.</p>
+
+
+<p><img src="images/displayinfoccGUI.gif" height="400" width="450"></p>
+
+
+<br>
+
+<h3><b><a name="displaybestfit">Display Best Estimated Filter</a></b></h3>
+
+
+<p>The best STRF has the largest predicted information value. This
+window also shows the tolerance value that give the best prediction.</p>
+
+
+<p><img src="images/displaybestfit.gif" height="400" width="450"></p>
+
+
+</div>
+
+
+<div id="sidebar">
+<hr>
+
+<h4>Links out:</h4>
+
+<p><a class="sidelink" href="http://www.nimh.nih.gov/neuroinformatics/index.cfm">Human Brain Project</a><span class="hide"> | </span>
+<a class="sidelink" href="http://senselab.med.yale.edu/senselab/ModelDB/default.asp">ModelDB</a><span class="hide"> | </span>
+<a class="sidelink" href="http://www.neurotree.org">Neurotree</a><span class="hide"> | </span>
+</p>
+
+
+
+<br>
+
+<p>This project is supported by the NIH Human Brain Project:
+<img class="photo" src="images/nimh.logo.jpg" alt="" height="102" width="130"></p>
+
+
+<br>
+
+<p>Site v.2 11-11-05</p>
+
+
+</div>
+
+    
+<div id="footer">
+Copyright &copy; 2005 UC Regents; modified from a design by Andreas Viklund.
+</div>
+
+
+</div>
+
+</body>
+</html>

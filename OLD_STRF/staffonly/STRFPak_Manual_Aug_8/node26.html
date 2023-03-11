@@ -1,0 +1,92 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with jLaTeX2HTML 2002 (1.62) JA patch-1.4
+patched version by:  Kenshi Muto, Debian Project.
+LaTeX2HTML 2002 (1.62),
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>STRFPAK's Calculation Implementation</TITLE>
+<META NAME="description" CONTENT="STRFPAK's Calculation Implementation">
+<META NAME="keywords" CONTENT="STRFPAK_Manual_Aug_8">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="jLaTeX2HTML v2002 JA patch-1.4">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="STRFPAK_Manual_Aug_8.css">
+
+<LINK REL="next" HREF="node27.html">
+<LINK REL="previous" HREF="node25.html">
+<LINK REL="up" HREF="node24.html">
+<LINK REL="next" HREF="node27.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html471"
+  HREF="node27.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html467"
+  HREF="node24.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html461"
+  HREF="node25.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html469"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html472"
+  HREF="node27.html">References for STRFPAK's Calculation</A>
+<B> Up:</B> <A NAME="tex2html468"
+  HREF="node24.html">Estimating the STRF</A>
+<B> Previous:</B> <A NAME="tex2html462"
+  HREF="node25.html">Calculating the STRF</A>
+ &nbsp <B>  <A NAME="tex2html470"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00562000000000000000">
+STRFPAK's Calculation Implementation</A>
+</H2>
+In the toolbox, the two algorithms are implemented: one is for
+the space-time nonseparable case and the other is for the space-time separable
+case. If there is reason to believe the real STRF is well approximated by the outer product of a function of time and another in space, the separable algorithm may be preferred because it is faster and uses fewer free parameters.  Otherwise, the more general non-separable algorithm may be favorable.
+All the functions used by the <B>Estimate</B> section of STRFPAK have 
+the prefix <IMG
+ WIDTH="35" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img72.png"
+ ALT="$cal\_$"> in their filenames. The rest of the filenames
+describes their specific function. 
+For example, <!-- MATH
+ $cal\_AutoCorr.m$
+ -->
+<IMG
+ WIDTH="138" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img73.png"
+ ALT="$cal\_AutoCorr.m$"> program calculates
+the auto-correlation of the time-series signals.
+
+As STRF estimation can be computationally intensive, STRFPAK-2.0 provides a progress status bars.
+When the calculationa are done, the small <B>Done Estimation</B>
+window appears.
+
+<BR><HR>
+<ADDRESS>
+
+2004-08-09
+</ADDRESS>
+</BODY>
+</HTML>

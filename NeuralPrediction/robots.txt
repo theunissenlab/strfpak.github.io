@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: andreas02.css
+Disallow: print.css
+Disallow: con.html
+Disallow: faq.html
+Disallow: rul.html
+Disallow: tim.html
+Disallow: /images/

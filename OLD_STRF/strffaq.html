@@ -1,0 +1,142 @@
+<HTML><HEAD>
+<title>Documents of The STRF Software</title>
+</HEAD>
+
+<BODY Background="picture/background1">
+
+<menu>
+        <menu>
+                <menu>
+<a href="index.html">Home</a> |
+<a href="overview.html">Overview</a> |
+<a href="guidemo.html">Software Demo and Tutorial</a> |
+<a href="download.html">Software Download</a> |
+<a href="strffaq.html">FAQ</a> |
+<a href="contact.html">Contact</a> |
+<a href="link.html">Relevant Links</a> |
+<a href="staffonly/staff.html">Team-members Only</a>
+<p>
+<hr>
+<p>
+
+<h2>Frequently Asked Questions and Answers</h2>
+These questions are frequently asked by our clients. New questions and
+answers are added to the bottom of question list which appears below;
+browse the question list periodically to check for new FAQs which may help
+you to answer your question.
+<p>
+<b><font size="+2">Section 1. Introduction and General Information</font></b>
+<ul>
+<li><a href="strffaq.html#whatisstrfpak">Q1.1. What is STRFPAK?
+</a>
+<li><a href="strffaq.html#whereisstrfpak">Q1.2. How do I 
+obtain STRFPAK?
+</a>
+<li><a href="strffaq.html#isstrfpakfree">Q1.3. Is STRFPAK free 
+software?</a>
+<li><a href="strffaq.html#system">Q1.4. Which required systems does STRFPAK need?
+</a>
+<li><a href="strffaq.html#language">Q1.5. Which language is STRFPAK written in?
+</a>
+</ul>
+
+<p>
+<b><font size="+2">Section 2. Using STRFPAK</font></b>
+<ul>
+<li><a href="strffaq.html#vertcat">Q2.1. 
+What need you do when you get
+"The expression on this line will generate an error when executed.  The error
+will be: Error using ==> vertcat
+All rows in the bracketed expression must have the same
+number of columns." or "Index exceeds matrix dimensions" message?
+</a>
+<li><a href="strffaq.html#hanning">Q2.2. 
+Why do I get the error message "Undefined function or variable: hanning"? 
+</a>
+</ul>
+
+<h2><a name="whatisstrfpak">
+Question 1.1.  What is STRFPAK?
+</a></h2>
+
+STRFPAK is a matlab toolbox for estimating the spatio-temporal receptive fields
+(STRFs) of sensory neurons from their responses to arbitrary stimuli.
+It includes two different measures to quantify the estimated STRF's goodness
+of fit. For ease of use, STRFPAK is implemented as Matlab Graphic User 
+Interface program.
+<p>
+
+<h2><a name="whereisstrfpak">
+Question 1.2.  How do I obtain STRFPAK?
+</a></h2>
+
+STRFPAK can be downloaded at 
+<a href="http://strfpak.berkeley.edu/download.html">
+the STRFPAK download page</a>.
+<p>
+ 
+<h2><a name="isstrfpakfree">
+Question 1.3.  Is STRFPAK free software?
+</a></h2>
+
+Right now, it is.
+<p>
+
+<h2><a name="system">
+Question 1.4.  Which required systems does STRFPAK need?
+</a></h2>
+
+The current version STRFPAK is written in Matlab. It runs on
+any operating systems which Matlab can run. But it also requires
+Matlab with its Signal Processing Toolbox, Statistics Toolbox and
+Optimization Toolbox.
+<p>
+
+<h2><a name="language">
+Question 1.5. Which language is STRFPAK written in?</a></h2>
+
+The version 0.1 of STRFPAK is written in Matlab. 
+<p>
+
+<h2><a name="vertcat">
+Question 2.1. What need you do when you get 
+"The expression on this line will generate an error when executed.  The error
+will be: Error using ==> vertcat
+All rows in the bracketed expression must have the same
+number of columns." or "Index exceeds matrix dimensions" message?
+</a></h2>
+
+"Vercat" error message usually tells us something wrong with your input
+   data selection. You may go back to the main window and click "Get
+   Files" button. The rightmost list box in the "Get Input file" window
+   shows your selection: the data set should include stimuli and response
+   data in this exact order. First field is stimulus and the second field
+   is neuron response data. If you reverse this order, you may get this
+   error.
+<p>
+
+<h2><a name="hanning">
+Question 2.2.
+Why do you get the error message "Undefined function or variable: hanning"?
+</a></h2>
+
+"Undefined function or variable: hanning " means your matlab does not
+   include hanning.m function. "hanning" function belongs to Matlab
+   signal processing toolbox. If your matlab does not have this toolbox,
+   you will get this error.
+<p>
+<hr>
+<i>
+We welcome questions and comments on this web page.  Please send email to <a href="junli@socrates.berkeley.edu">junli@socrates.berkeley.edu</a><br>
+Last Modified: Thursday, 19-Aug-2002<p>
+</i>
+
+                </menu>
+        </menu>
+</menu>
+
+<a href = "index.html"><img src="picture/home.gif" border=1 alt="home">Back to the STRF Software home page</a> <br>
+
+
+</BODY>
+</HTML>

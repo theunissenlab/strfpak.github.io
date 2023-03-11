@@ -1,0 +1,58 @@
+<h3>What is STRFPAK?</h3>
+<p>
+STRFPAK is a matlab toolbox for estimating the spatio-temporal receptive fields
+(STRFs) of sensory neurons from their responses to arbitrary stimuli.
+It includes two different measures to quantify the estimated STRF's goodness
+of fit. For ease of use, STRFPAK is implemented as Matlab Graphic User 
+Interface program.
+</p>
+
+<h3>How do I obtain STRFPAK? </h3>
+<p>
+STRFPAK can be downloaded at 
+<a href="http://strfpak.berkeley.edu/download.html">
+the STRFPAK download page</a>.
+</p>
+ 
+<h3>Is STRFPAK free software?</h3>
+<p>
+Right now, it is.
+</p>
+
+<h3>Which required systems does STRFPAK need?</h3>
+<p>
+The current version STRFPAK is written in Matlab. It runs on
+any operating systems which Matlab can run. But it also requires
+Matlab with its Signal Processing Toolbox, Statistics Toolbox and
+Optimization Toolbox.
+</p>
+
+<h3>Which language is STRFPAK written in?</h3>
+<p>
+The version 0.1 of STRFPAK is written in Matlab. 
+</p>
+
+<h3>What need you do when you get 
+"The expression on this line will generate an error when executed.  The error
+will be: Error using ==> vertcat
+All rows in the bracketed expression must have the same
+number of columns." or "Index exceeds matrix dimensions" message?
+</h3>
+<p>
+"Vercat" error message usually tells us something wrong with your input
+   data selection. You may go back to the main window and click "Get
+   Files" button. The rightmost list box in the "Get Input file" window
+   shows your selection: the data set should include stimuli and response
+   data in this exact order. First field is stimulus and the second field
+   is neuron response data. If you reverse this order, you may get this
+   error.
+</p>
+
+<h3>Why do you get the error message "Undefined function or variable: hanning"?
+</h3>
+<p>
+"Undefined function or variable: hanning " means your matlab does not
+   include hanning.m function. "hanning" function belongs to Matlab
+   signal processing toolbox. If your matlab does not have this toolbox,
+   you will get this error.
+</p>

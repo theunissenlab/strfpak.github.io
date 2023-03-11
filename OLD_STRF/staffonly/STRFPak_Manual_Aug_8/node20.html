@@ -1,0 +1,235 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with jLaTeX2HTML 2002 (1.62) JA patch-1.4
+patched version by:  Kenshi Muto, Debian Project.
+LaTeX2HTML 2002 (1.62),
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Wavelet Transforms</TITLE>
+<META NAME="description" CONTENT="Wavelet Transforms">
+<META NAME="keywords" CONTENT="STRFPAK_Manual_Aug_8">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="jLaTeX2HTML v2002 JA patch-1.4">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="STRFPAK_Manual_Aug_8.css">
+
+<LINK REL="next" HREF="node21.html">
+<LINK REL="previous" HREF="node19.html">
+<LINK REL="up" HREF="node16.html">
+<LINK REL="next" HREF="node21.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html395"
+  HREF="node21.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html391"
+  HREF="node16.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html385"
+  HREF="node19.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html393"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html396"
+  HREF="node21.html">Getting Input</A>
+<B> Up:</B> <A NAME="tex2html392"
+  HREF="node16.html">Get Input</A>
+<B> Previous:</B> <A NAME="tex2html386"
+  HREF="node19.html">Short Time Fourier Transform</A>
+ &nbsp <B>  <A NAME="tex2html394"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00554000000000000000">
+Wavelet Transforms</A>
+</H2>
+
+<DIV ALIGN="CENTER"><A NAME="waveletfig"></A><A NAME="152"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 3.5:</STRONG>
+The Songwave <IMG
+ WIDTH="24" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1.png"
+ ALT="$\rightarrow $"> Scalogram window in STRFPAK</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+ WIDTH="575" HEIGHT="439" ALIGN="BOTTOM" BORDER="0"
+ SRC="img24.png"
+ ALT="\includegraphics[width=5in]{figures/waveletfig.ps}"></DIV></TD></TR>
+</TABLE>
+</DIV>
+After clicking the <!-- MATH
+ $\fbox{Wavelet Transform}$
+ -->
+<IMG
+ WIDTH="171" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="img9.png"
+ ALT="\fbox{Wavelet Transform}"> button, 
+the <B>Songwave <IMG
+ WIDTH="24" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1.png"
+ ALT="$\rightarrow $"> scalogram</B>
+window shown in Figure&nbsp;<A HREF="node20.html#waveletfig">3.5</A> 
+appears. The right panel of that window displays options for and properties of the wavelet transform. The left panel is used for displaying your output 
+when you click the <!-- MATH
+ $\fbox{Display}$
+ -->
+<IMG
+ WIDTH="77" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="img13.png"
+ ALT="\fbox{Display}"> button.
+
+<UL>
+<LI><!-- MATH
+ $\fbox{Load files}$
+ -->
+<IMG
+ WIDTH="94" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="img14.png"
+ ALT="\fbox{Load files}">: is used to load raw data, e.g. sound wave files
+and their associated response data files into STRFPAK.
+The <B>Load file window</B> shown in Figure&nbsp;<A HREF="node19.html#loadfile">3.3</A>
+ pops-up after <!-- MATH
+ $\fbox{Load files}$
+ -->
+<IMG
+ WIDTH="94" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="img14.png"
+ ALT="\fbox{Load files}"> is clicked. For a detailed description about this <B>Load file window</B>, please see above section.
+
+</LI>
+<LI><B>Parameters</B>: All the parameters needed for the wavelet transform of the sound stimulus files are specified here. For a detailed
+description about this method, please refer to our preprocessing
+paper&nbsp;[].
+
+<UL>
+<LI><B>WindowLength</B>: the window length of the Morlet analyzing 
+wavelet at its coarsest scale.
+
+</LI>
+<LI><B>Num_filters</B>: the total number of the wavelet filters you want
+          to use. The larger the number of filters, the smoother of the scalogram, but the longer it takes to compute.
+ 
+</LI>
+<LI><B>amp_samprate (Hz)</B>: the sampling rate that we want for the amplitude
+                 envelope. By default, it is 10 times of <B>filter_width</B>.
+                 But you can change.
+
+</LI>
+<LI><B>resp_samprate (Hz)</B>: the sampling rate of the spike data. This must be set to the sampling frequency in Hz when you collect your data.  For example, with 1 ms bins, the resp_samprate would be 1000 Hz.
+
+</LI>
+<LI><B>psth_smoothconst</B>: the window length for smoothing your psth.  For validation purposes, it is common to smooth the PSTH before calculating a correlation coefficient. psth_smoothconst is the width in ms of this smoothing window.
+</LI>
+<LI><B>stim_samprate (Hz)</B>: the sampling rate of stimuli in Hz. e.g. the demo
+                 songwave file has a sampling frequency of 32000 Hz, and many music files have a sampling rate of 44100 Hz. It is automatically
+                 calculated for you based on your sound wave file.
+
+</LI>
+<LI><B>Scale option</B>: the choice of whether linear scale or logarithmic scale
+                  is used for the amplitude envelope. For many sensory systems a neurons response correlates better to the log of a stimulus intensity better than to the stimulus intensity itself.
+ 
+</LI>
+</UL>
+
+</LI>
+<LI><!-- MATH
+ $\fbox{Compute and Save}$
+ -->
+<IMG
+ WIDTH="170" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="img19.png"
+ ALT="\fbox{Compute and Save}">: Computes the spectrogram of the signal and saves
+                  the result into the directory which you are asked to specify.
+             The computing status bar also shows up so that you can know the
+             progress of the computation.
+
+</LI>
+<LI><!-- MATH
+ $\fbox{Display}$
+ -->
+<IMG
+ WIDTH="77" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="img13.png"
+ ALT="\fbox{Display}">: Graphically displays the scalogram of the stimulus and
+                the psth smoothed with <B>psth_smoothconst</B> window size.
+               If more than one data set are chosen, <IMG
+ WIDTH="55" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="img20.png"
+ ALT="\fbox{Next}"> and 
+               <IMG
+ WIDTH="54" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="img21.png"
+ ALT="\fbox{Prev}"> buttons show up so that you can click to see the 
+               next data set.
+</LI>
+<LI><IMG
+ WIDTH="61" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="img22.png"
+ ALT="\fbox{Reset}">: Resets all the parameters and the data sets chosen.
+</LI>
+<LI><IMG
+ WIDTH="53" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3.png"
+ ALT="\fbox{Help}">: Causes a help window on this window to appear.
+</LI>
+<LI><IMG
+ WIDTH="59" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="img23.png"
+ ALT="\fbox{Close}">: Closes this window and saves all the parameters and all the
+                results.
+
+</LI>
+</UL><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html395"
+  HREF="node21.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html391"
+  HREF="node16.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html385"
+  HREF="node19.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html393"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html396"
+  HREF="node21.html">Getting Input</A>
+<B> Up:</B> <A NAME="tex2html392"
+  HREF="node16.html">Get Input</A>
+<B> Previous:</B> <A NAME="tex2html386"
+  HREF="node19.html">Short Time Fourier Transform</A>
+ &nbsp <B>  <A NAME="tex2html394"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+
+2004-08-09
+</ADDRESS>
+</BODY>
+</HTML>
